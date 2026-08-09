@@ -88,7 +88,7 @@
       ],
       "featured": true,
       "updatedAt": "2026-08-08",
-      "icon": "icons/chatgpt.png"
+      "icon": "icons/chatgpt.webp"
     },
     {
       "name": "Claude",
@@ -113,7 +113,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-07",
-      "icon": "icons/claude.ico"
+      "icon": "icons/claude.webp"
     },
     {
       "name": "Gemini",
@@ -138,7 +138,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-06",
-      "icon": "icons/gemini.png"
+      "icon": "icons/gemini.webp"
     },
     {
       "name": "DeepSeek",
@@ -163,7 +163,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-05",
-      "icon": "icons/deepseek.ico"
+      "icon": "icons/deepseek.webp"
     },
     {
       "name": "豆包",
@@ -188,7 +188,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-04",
-      "icon": "icons/doubao-com.png"
+      "icon": "icons/doubao-com.webp"
     },
     {
       "name": "Kimi",
@@ -210,7 +210,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-03",
-      "icon": "icons/kimi.ico"
+      "icon": "icons/kimi.webp"
     },
     {
       "name": "Cursor",
@@ -233,7 +233,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-02",
-      "icon": "icons/cursor.ico"
+      "icon": "icons/cursor.webp"
     },
     {
       "name": "Windsurf",
@@ -256,7 +256,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-01",
-      "icon": "icons/windsurf.png"
+      "icon": "icons/windsurf.webp"
     },
     {
       "name": "Qoder",
@@ -302,7 +302,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-30",
-      "icon": "icons/trae.png"
+      "icon": "icons/trae.webp"
     },
     {
       "name": "Liblib",
@@ -325,7 +325,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-29",
-      "icon": "icons/liblib.ico"
+      "icon": "icons/liblib.webp"
     },
     {
       "name": "即梦AI",
@@ -351,7 +351,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-28",
-      "icon": "icons/ai.ico"
+      "icon": "icons/ai.webp"
     },
     {
       "name": "Midjourney",
@@ -374,7 +374,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-27",
-      "icon": "icons/midjourney.png"
+      "icon": "icons/midjourney.webp"
     },
     {
       "name": "Huemint",
@@ -397,7 +397,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-26",
-      "icon": "icons/huemint.png"
+      "icon": "icons/huemint.webp"
     },
     {
       "name": "GitHub",
@@ -423,7 +423,7 @@
       ],
       "featured": true,
       "updatedAt": "2026-07-25",
-      "icon": "icons/github.png"
+      "icon": "icons/github.webp"
     },
     {
       "name": "VS Code",
@@ -449,7 +449,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-24",
-      "icon": "icons/vs-code.ico"
+      "icon": "icons/vs-code.webp"
     },
     {
       "name": "ReactBits",
@@ -471,7 +471,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-23",
-      "icon": "icons/reactbits.ico"
+      "icon": "icons/reactbits.webp"
     },
     {
       "name": "Vue Bits",
@@ -493,7 +493,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-22",
-      "icon": "icons/vue-bits.ico"
+      "icon": "icons/vue-bits.webp"
     },
     {
       "name": "GSAP",
@@ -515,7 +515,7 @@
       ],
       "featured": true,
       "updatedAt": "2026-07-21",
-      "icon": "icons/gsap.png"
+      "icon": "icons/gsap.webp"
     },
     {
       "name": "Framer Motion",
@@ -537,7 +537,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-20",
-      "icon": "icons/framer-motion.png"
+      "icon": "icons/framer-motion.webp"
     },
     {
       "name": "Inspira UI",
@@ -560,7 +560,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-19",
-      "icon": "icons/inspira-ui.ico"
+      "icon": "icons/inspira-ui.webp"
     },
     {
       "name": "Fancy Components",
@@ -582,7 +582,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-18",
-      "icon": "icons/fancy-components.png"
+      "icon": "icons/fancy-components.webp"
     },
     {
       "name": "Uiverse",
@@ -605,7 +605,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-17",
-      "icon": "icons/uiverse.ico"
+      "icon": "icons/uiverse.webp"
     },
     {
       "name": "NavNav",
@@ -627,7 +627,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-16",
-      "icon": "icons/navnav.png"
+      "icon": "icons/navnav.webp"
     },
     {
       "name": "Lenis",
@@ -648,7 +648,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-15",
-      "icon": "icons/lenis.png"
+      "icon": "icons/lenis.webp"
     },
     {
       "name": "LottieFiles",
@@ -669,7 +669,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-14",
-      "icon": "icons/lottiefiles.png"
+      "icon": "icons/lottiefiles.webp"
     },
     {
       "name": "SVG路径动画",
@@ -690,7 +690,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-13",
-      "icon": "icons/svg.ico"
+      "icon": "icons/svg.webp"
     },
     {
       "name": "MDN",
@@ -715,7 +715,7 @@
       ],
       "featured": true,
       "updatedAt": "2026-07-12",
-      "icon": "icons/mdn.png"
+      "icon": "icons/mdn.webp"
     },
     {
       "name": "BootCDN",
@@ -737,7 +737,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-11",
-      "icon": "icons/bootcdn.ico"
+      "icon": "icons/bootcdn.webp"
     },
     {
       "name": "Cursor Directory",
@@ -759,7 +759,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-10",
-      "icon": "icons/cursor-directory.png"
+      "icon": "icons/cursor-directory.webp"
     },
     {
       "name": "Cursor Rules CN",
@@ -781,7 +781,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-09",
-      "icon": "icons/cursor-rules-cn.png"
+      "icon": "icons/cursor-rules-cn.webp"
     },
     {
       "name": "CodePen",
@@ -803,7 +803,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-08",
-      "icon": "icons/codepen.png"
+      "icon": "icons/codepen.webp"
     },
     {
       "name": "Figma",
@@ -828,7 +828,7 @@
       ],
       "featured": true,
       "updatedAt": "2026-07-07",
-      "icon": "icons/figma.png"
+      "icon": "icons/figma.webp"
     },
     {
       "name": "Framer",
@@ -850,7 +850,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-06",
-      "icon": "icons/framer.png"
+      "icon": "icons/framer.webp"
     },
     {
       "name": "Webflow",
@@ -873,7 +873,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-05",
-      "icon": "icons/webflow.png"
+      "icon": "icons/webflow.webp"
     },
     {
       "name": "Canva",
@@ -898,7 +898,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-04",
-      "icon": "icons/canva.ico"
+      "icon": "icons/canva.webp"
     },
     {
       "name": "稿定",
@@ -920,7 +920,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-03",
-      "icon": "icons/gaoding-com.ico"
+      "icon": "icons/gaoding-com.webp"
     },
     {
       "name": "Remove.bg",
@@ -943,7 +943,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-02",
-      "icon": "icons/remove-bg.png"
+      "icon": "icons/remove-bg.webp"
     },
     {
       "name": "佐糖",
@@ -966,7 +966,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-01",
-      "icon": "icons/picwish-cn.png"
+      "icon": "icons/picwish-cn.webp"
     },
     {
       "name": "D.design 抠图",
@@ -1010,7 +1010,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-06-29",
-      "icon": "icons/happyhues.png"
+      "icon": "icons/happyhues.webp"
     },
     {
       "name": "FontAwesome",
@@ -1032,7 +1032,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-06-28",
-      "icon": "icons/fontawesome.ico"
+      "icon": "icons/fontawesome.webp"
     },
     {
       "name": "Lordicon",
@@ -1054,7 +1054,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-06-27",
-      "icon": "icons/lordicon.png"
+      "icon": "icons/lordicon.webp"
     },
     {
       "name": "IconFinder",
@@ -1076,7 +1076,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-06-26",
-      "icon": "icons/iconfinder.ico"
+      "icon": "icons/iconfinder.webp"
     },
     {
       "name": "阿里巴巴矢量图标库",
@@ -1120,7 +1120,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-08",
-      "icon": "icons/qiuziti-com.ico"
+      "icon": "icons/qiuziti-com.webp"
     },
     {
       "name": "字体搬运工",
@@ -1165,7 +1165,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-06",
-      "icon": "icons/maoken-com.ico"
+      "icon": "icons/maoken-com.webp"
     },
     {
       "name": "Unsplash",
@@ -1190,7 +1190,7 @@
       ],
       "featured": true,
       "updatedAt": "2026-08-05",
-      "icon": "icons/unsplash.ico"
+      "icon": "icons/unsplash.webp"
     },
     {
       "name": "Pexels",
@@ -1213,7 +1213,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-04",
-      "icon": "icons/pexels.png"
+      "icon": "icons/pexels.webp"
     },
     {
       "name": "Pixabay",
@@ -1236,7 +1236,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-03",
-      "icon": "icons/pixabay.png"
+      "icon": "icons/pixabay.webp"
     },
     {
       "name": "彼岸桌面",
@@ -1257,7 +1257,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-02",
-      "icon": "icons/netbian-com.ico"
+      "icon": "icons/netbian-com.webp"
     },
     {
       "name": "暖糖",
@@ -1278,7 +1278,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-01",
-      "icon": "icons/nuantang-net.ico"
+      "icon": "icons/nuantang-net.webp"
     },
     {
       "name": "哲风壁纸",
@@ -1299,7 +1299,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-31",
-      "icon": "icons/haowallpaper-com.ico"
+      "icon": "icons/haowallpaper-com.webp"
     },
     {
       "name": "千图网",
@@ -1323,7 +1323,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-30",
-      "icon": "icons/58pic-com.ico"
+      "icon": "icons/58pic-com.webp"
     },
     {
       "name": "觅知网",
@@ -1345,7 +1345,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-29",
-      "icon": "icons/51miz-com.ico"
+      "icon": "icons/51miz-com.webp"
     },
     {
       "name": "包图网",
@@ -1367,7 +1367,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-28",
-      "icon": "icons/ibaotu-com.ico"
+      "icon": "icons/ibaotu-com.webp"
     },
     {
       "name": "站长素材",
@@ -1412,7 +1412,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-26",
-      "icon": "icons/design006-com.ico"
+      "icon": "icons/design006-com.webp"
     },
     {
       "name": "标小智",
@@ -1457,7 +1457,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-24",
-      "icon": "icons/uugai-com.ico"
+      "icon": "icons/uugai-com.webp"
     },
     {
       "name": "Notion",
@@ -1481,7 +1481,7 @@
       ],
       "featured": true,
       "updatedAt": "2026-07-23",
-      "icon": "icons/notion.ico"
+      "icon": "icons/notion.webp"
     },
     {
       "name": "草料二维码",
@@ -1502,7 +1502,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-22",
-      "icon": "icons/cli-im.ico"
+      "icon": "icons/cli-im.webp"
     },
     {
       "name": "Hotkey CheatSheet",
@@ -1523,7 +1523,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-21",
-      "icon": "icons/hotkey-cheatsheet.png"
+      "icon": "icons/hotkey-cheatsheet.webp"
     },
     {
       "name": "Text-to-Speech",
@@ -1544,7 +1544,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-20",
-      "icon": "icons/text-to-speech.png"
+      "icon": "icons/text-to-speech.webp"
     },
     {
       "name": "XMind",
@@ -1565,7 +1565,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-19",
-      "icon": "icons/xmind.ico"
+      "icon": "icons/xmind.webp"
     },
     {
       "name": "Typora",
@@ -1586,7 +1586,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-18",
-      "icon": "icons/typora.png"
+      "icon": "icons/typora.webp"
     },
     {
       "name": "Snipaste",
@@ -1628,7 +1628,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-16",
-      "icon": "icons/mocreak.ico"
+      "icon": "icons/mocreak.webp"
     },
     {
       "name": "Vowa",
@@ -1649,7 +1649,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-15",
-      "icon": "icons/vowa.png"
+      "icon": "icons/vowa.webp"
     },
     {
       "name": "LestVPN",
@@ -1670,7 +1670,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-14",
-      "icon": "icons/lestvpn.png"
+      "icon": "icons/lestvpn.webp"
     },
     {
       "name": "SiteInspire",
@@ -1692,7 +1692,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-13",
-      "icon": "icons/siteinspire.png"
+      "icon": "icons/siteinspire.webp"
     },
     {
       "name": "Awwwards",
@@ -1736,7 +1736,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-11",
-      "icon": "icons/dribbble.png"
+      "icon": "icons/dribbble.webp"
     },
     {
       "name": "站酷",
@@ -1758,7 +1758,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-10",
-      "icon": "icons/zcool-com-cn.ico"
+      "icon": "icons/zcool-com-cn.webp"
     },
     {
       "name": "中国知网",
@@ -1779,7 +1779,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-09",
-      "icon": "icons/cnki-net.ico"
+      "icon": "icons/cnki-net.webp"
     },
     {
       "name": "Grammarly",
@@ -1801,7 +1801,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-08",
-      "icon": "icons/grammarly.png"
+      "icon": "icons/grammarly.webp"
     },
     {
       "name": "DeepL",
@@ -1823,7 +1823,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-07",
-      "icon": "icons/deepl.ico"
+      "icon": "icons/deepl.webp"
     },
     {
       "name": "QuillBot",
@@ -1845,7 +1845,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-06",
-      "icon": "icons/quillbot.ico"
+      "icon": "icons/quillbot.webp"
     },
     {
       "name": "Aibiye",
@@ -1867,7 +1867,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-05",
-      "icon": "icons/aibiye.ico"
+      "icon": "icons/aibiye.webp"
     },
     {
       "name": "AI工具集",
@@ -1889,7 +1889,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-04",
-      "icon": "icons/ai-2.png"
+      "icon": "icons/ai-2.webp"
     },
     {
       "name": "Haitangw",
@@ -1911,7 +1911,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-03",
-      "icon": "icons/haitangw.png"
+      "icon": "icons/haitangw.webp"
     },
     {
       "name": "Awesome Lists",
@@ -1932,7 +1932,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-02",
-      "icon": "icons/awesome-lists.png"
+      "icon": "icons/awesome-lists.webp"
     },
     {
       "name": "奇迹秀",
@@ -1955,7 +1955,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-07-01",
-      "icon": "icons/qijishow-com.ico"
+      "icon": "icons/qijishow-com.webp"
     },
     {
       "name": "软仓",
@@ -1976,7 +1976,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-06-30",
-      "icon": "icons/ruancang-net.ico"
+      "icon": "icons/ruancang-net.webp"
     },
     {
       "name": "Netflix",
@@ -1997,7 +1997,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-06-29",
-      "icon": "icons/netflix.png"
+      "icon": "icons/netflix.webp"
     },
     {
       "name": "YouTube",
@@ -2018,7 +2018,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-06-28",
-      "icon": "icons/youtube.png"
+      "icon": "icons/youtube.webp"
     },
     {
       "name": "哔哩哔哩",
@@ -2042,7 +2042,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-06-27",
-      "icon": "icons/bilibili-com.ico"
+      "icon": "icons/bilibili-com.webp"
     },
     {
       "name": "腾讯视频",
@@ -2063,7 +2063,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-06-26",
-      "icon": "icons/v-qq-com.ico"
+      "icon": "icons/v-qq-com.webp"
     },
     {
       "name": "爱奇艺",
@@ -2084,7 +2084,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-06-25",
-      "icon": "icons/iqiyi-com.ico"
+      "icon": "icons/iqiyi-com.webp"
     },
     {
       "name": "优酷视频",
@@ -2105,7 +2105,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-08",
-      "icon": "icons/youku-com.ico"
+      "icon": "icons/youku-com.webp"
     },
     {
       "name": "抖音",
@@ -2126,7 +2126,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-07",
-      "icon": "icons/douyin-com.ico"
+      "icon": "icons/douyin-com.webp"
     },
     {
       "name": "小红书",
@@ -2150,7 +2150,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-06",
-      "icon": "icons/xiaohongshu-com.ico"
+      "icon": "icons/xiaohongshu-com.webp"
     },
     {
       "name": "QQ音乐",
@@ -2171,7 +2171,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-05",
-      "icon": "icons/qq.ico"
+      "icon": "icons/qq.webp"
     },
     {
       "name": "网易云音乐",
@@ -2195,7 +2195,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-04",
-      "icon": "icons/music-163-com.ico"
+      "icon": "icons/music-163-com.webp"
     },
     {
       "name": "Spotify",
@@ -2216,7 +2216,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-03",
-      "icon": "icons/spotify.ico"
+      "icon": "icons/spotify.webp"
     },
     {
       "name": "米你AI",
@@ -2241,7 +2241,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-08",
-      "icon": "icons/ai-3.ico"
+      "icon": "icons/ai-3.webp"
     },
     {
       "name": "Gamma",
@@ -2267,7 +2267,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-08",
-      "icon": "icons/gamma.png"
+      "icon": "icons/gamma.webp"
     },
     {
       "name": "Lovart",
@@ -2292,7 +2292,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-08",
-      "icon": "icons/lovart.ico"
+      "icon": "icons/lovart.webp"
     },
     {
       "name": "建筑学长",
@@ -2315,7 +2315,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-08",
-      "icon": "icons/resource.ico"
+      "icon": "icons/resource.webp"
     },
     {
       "name": "Meshy",
@@ -2340,7 +2340,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-08",
-      "icon": "icons/meshy.png"
+      "icon": "icons/meshy.webp"
     },
     {
       "name": "MotionSites",
@@ -2365,7 +2365,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-08",
-      "icon": "icons/motionsites.png"
+      "icon": "icons/motionsites.webp"
     },
     {
       "name": "Loading UI",
@@ -2390,7 +2390,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-08",
-      "icon": "icons/loading-ui.ico"
+      "icon": "icons/loading-ui.webp"
     },
     {
       "name": "21st.dev",
@@ -2415,7 +2415,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-08",
-      "icon": "icons/21st-dev.png"
+      "icon": "icons/21st-dev.webp"
     },
     {
       "name": "OriginKit",
@@ -2440,7 +2440,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-08",
-      "icon": "icons/originkit.png"
+      "icon": "icons/originkit.webp"
     },
     {
       "name": "StringTune",
@@ -2465,7 +2465,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-08",
-      "icon": "icons/stringtune.ico"
+      "icon": "icons/stringtune.webp"
     },
     {
       "name": "Stitch",
@@ -2490,7 +2490,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-08",
-      "icon": "icons/stitch.png"
+      "icon": "icons/stitch.webp"
     },
     {
       "name": "千库网",
@@ -2515,7 +2515,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-08",
-      "icon": "icons/resource-2.ico"
+      "icon": "icons/resource-2.webp"
     },
     {
       "name": "花瓣网",
@@ -2540,7 +2540,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-08",
-      "icon": "icons/resource-3.ico"
+      "icon": "icons/resource-3.webp"
     },
     {
       "name": "潮国创意",
@@ -2565,7 +2565,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-08",
-      "icon": "icons/resource-4.ico"
+      "icon": "icons/resource-4.webp"
     },
     {
       "name": "大美工",
@@ -2590,7 +2590,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-08",
-      "icon": "icons/resource-5.ico"
+      "icon": "icons/resource-5.webp"
     },
     {
       "name": "AiShort",
@@ -2616,7 +2616,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-08",
-      "icon": "icons/aishort.ico"
+      "icon": "icons/aishort.webp"
     },
     {
       "name": "秋裤工具箱",
@@ -2641,7 +2641,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-08",
-      "icon": "icons/resource-6.png"
+      "icon": "icons/resource-6.webp"
     },
     {
       "name": "猫猫云",
@@ -2666,7 +2666,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-08",
-      "icon": "icons/resource-7.ico"
+      "icon": "icons/resource-7.webp"
     },
     {
       "name": "PackyAPI",
@@ -2691,7 +2691,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-08",
-      "icon": "icons/packyapi.ico"
+      "icon": "icons/packyapi.webp"
     },
     {
       "name": "极简画廊",
@@ -2716,7 +2716,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-08",
-      "icon": "icons/resource-8.png"
+      "icon": "icons/resource-8.webp"
     },
     {
       "name": "Logo System",
@@ -2741,7 +2741,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-08",
-      "icon": "icons/logo-system.png"
+      "icon": "icons/logo-system.webp"
     },
     {
       "name": "Webzibition",
@@ -2766,7 +2766,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-08",
-      "icon": "icons/webzibition.png"
+      "icon": "icons/webzibition.webp"
     },
     {
       "name": "Godly",
@@ -2816,7 +2816,7 @@
       ],
       "featured": false,
       "updatedAt": "2026-08-08",
-      "icon": "icons/site-of-sites.png"
+      "icon": "icons/site-of-sites.webp"
     },
     {
       "name": "Recent Design",

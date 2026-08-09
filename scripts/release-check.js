@@ -77,6 +77,33 @@ for (const file of ["site-config.js", "sitemap.xml", "robots.txt", "manifest.web
   if (!fs.existsSync(path.join(DIST_ROOT, file))) errors.push(`缺少发布文件：${file}`);
 }
 
+const toolPages = fs.existsSync(path.join(DIST_ROOT, "tools"))
+  ? fs.readdirSync(path.join(DIST_ROOT, "tools"), { withFileTypes: true }).filter((entry) => entry.isDirectory())
+  : [];
+const categoryPages = fs.existsSync(path.join(DIST_ROOT, "category"))
+  ? fs.readdirSync(path.join(DIST_ROOT, "category"), { withFileTypes: true }).filter((entry) => entry.isDirectory())
+  : [];
+if (toolPages.length !== data.sites.length) {
+  errors.push(`工具详情页数量错误：应为 ${data.sites.length}，实际为 ${toolPages.length}`);
+}
+if (categoryPages.length !== data.categories.length) {
+  errors.push(`分类页数量错误：应为 ${data.categories.length}，实际为 ${categoryPages.length}`);
+}
+for (const site of data.sites) {
+  if (!fs.existsSync(path.join(DIST_ROOT, "tools", site.slug, "index.html"))) {
+    errors.push(`缺少工具详情页：${site.slug}`);
+  }
+}
+
+if (configuredSiteUrl && fs.existsSync(path.join(DIST_ROOT, "sitemap.xml"))) {
+  const sitemap = fs.readFileSync(path.join(DIST_ROOT, "sitemap.xml"), "utf8");
+  const sitemapUrlCount = (sitemap.match(/<url>/g) || []).length;
+  const expectedUrlCount = 1 + data.categories.length + data.sites.length;
+  if (sitemapUrlCount !== expectedUrlCount) {
+    errors.push(`sitemap URL 数量错误：应为 ${expectedUrlCount}，实际为 ${sitemapUrlCount}`);
+  }
+}
+
 const verifiedCount = data.sites.filter((site) => site.verifiedAt).length;
 if (verifiedCount < data.sites.length) {
   warnings.push(`${data.sites.length - verifiedCount} 个站点尚未填写 verifiedAt；页面会诚实显示“待核验”`);

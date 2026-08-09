@@ -2,7 +2,7 @@
 
 RoseTools 是一个面向设计师与开发者的精品资源导航站。项目使用原生 HTML、CSS 和 JavaScript，无框架、无账号系统、无数据库，可直接部署到任意静态托管平台。
 
-首页提供场景合集、编辑精选、最近更新和完整资源筛选。点击资源卡片会打开站内工具详情抽屉，展示分类、价格、平台、标签、别名、最近核验时间与同类工具；详情通过 `tool` 参数分享，场景合集通过 `collection` 参数分享。
+首页提供场景合集、编辑精选、最近更新和完整资源筛选。完整列表首批显示 24 个资源，可按需继续加载，减少初次渲染压力。点击资源卡片会打开站内工具详情抽屉，展示分类、价格、平台、标签、别名、最近核验时间与同类工具；同时每个资源和分类都有独立静态页面，便于分享与搜索引擎收录。
 
 界面动画由本地 vendored GSAP 与 ScrollTrigger 驱动，不依赖运行时 CDN。动画只使用位移、缩放和透明度。默认跟随系统的“减少动态效果”设置；如系统已开启精简动效，也可以通过侧栏底部的动效开关明确启用完整动画。
 
@@ -26,7 +26,7 @@ RoseTools/
 │  ├─ data/             sites.json 与 site-config.json
 │  ├─ assets/           Logo、分享图与可选站点图标
 │  └─ vendor/           GSAP 与 ScrollTrigger
-├─ scripts/             构建、导入、链接检查和本地服务器
+├─ scripts/             构建、导入、图标优化、链接检查和本地服务器
 ├─ tests/               数据与静态页面测试
 ├─ dist/                自动生成的纯静态部署目录
 ├─ package.json
@@ -37,7 +37,7 @@ RoseTools/
 
 ## 部署到 GitHub Pages
 
-项目已包含 `.github/workflows/deploy-pages.yml`。推送到 `main` 分支后，GitHub Actions 会自动测试、构建 `dist/` 并发布；构建时会读取 GitHub Pages 的实际地址，自动生成正确的 canonical、Open Graph URL、`robots.txt` 和 `sitemap.xml`。
+项目已包含 `.github/workflows/deploy-pages.yml`。推送到 `main` 分支后，GitHub Actions 会自动安装锁定依赖、测试、构建 `dist/` 并发布；构建时会读取 GitHub Pages 的实际地址，自动生成正确的 canonical、Open Graph URL、`robots.txt`、包含首页/分类/工具详情的 `sitemap.xml`。
 
 首次部署：
 
@@ -75,10 +75,11 @@ npm run sync
 
 ```bash
 npm run sync-icons
+npm run optimize-icons
 npm run build
 ```
 
-图标同步会优先访问源网站声明的 favicon；遇到反爬或限流时，仅在维护阶段通过 Icon Horse 获取其缓存的源站 favicon。所有成功结果都会保存到项目内，页面访问者不会连接图标服务。脚本只接受公网 HTTP(S) 地址和受支持的图片格式，限制响应大小与重定向次数，并拒绝私有网络地址。下载失败的站点会继续显示本地首字母占位，不影响构建和浏览。使用 `npm run sync-icons -- --refresh` 可以重新获取已有图标。
+图标同步会优先访问源网站声明的 favicon；遇到反爬或限流时，仅在维护阶段通过 Icon Horse 获取其缓存的源站 favicon。所有成功结果都会保存到项目内，页面访问者不会连接图标服务。`optimize-icons` 会在保持来源图标外观的前提下，将可压缩的 PNG/ICO 缩至最多 64px 并转为更小的无损 WebP，只在体积确实下降时替换。下载失败的站点会继续显示本地首字母占位，不影响构建和浏览。使用 `npm run sync-icons -- --refresh` 可以重新获取已有图标。
 
 仅检查数据、不重新生成文件：
 
@@ -129,11 +130,13 @@ npm run release-check -- --allow-placeholders
 npm run check-links
 ```
 
-检查结果保存在 `reports/link-report-YYYY-MM-DD.json`。可以限制数量或调整并发：
+检查结果保存在 `reports/link-report-YYYY-MM-DD.json`，区分正常、访问受限和失败，并记录跨域或不安全跳转。`.github/workflows/check-links.yml` 会每周运行一次并上传报告，不会自动删除资源或修改 `verifiedAt`。可以限制数量或调整并发：
 
 ```bash
 node scripts/check-links.js --limit 10 --concurrency 4 --timeout 10000
 ```
+
+自动巡检场景可以加上 `--no-fail`，即使发现失效链接也保留完整报告并正常结束工作流。
 
 ## 验证
 

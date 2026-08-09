@@ -37,4 +37,6 @@ test("本地服务器为站点图标返回正确图片类型", () => {
   for (const type of ["image/png", "image/x-icon", "image/webp", "image/svg+xml"]) {
     assert.match(server, new RegExp(type.replace("+", "\\+")));
   }
+  assert.match(server, /pathname\.endsWith\("\/"\)/);
+  assert.match(server, /path\.join\(requestedPath, "index\.html"\)/);
 });

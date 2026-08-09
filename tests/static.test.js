@@ -88,3 +88,11 @@ test("场景合集与工具详情支持分享和键盘交互", () => {
   assert.match(animationScript, /function detailOpened/);
   assert.match(animationScript, /function detailClosed/);
 });
+
+test("首页分批渲染资源并提供可访问的静态详情链接", () => {
+  assert.match(html, /id="load-more"[^>]+aria-controls="results-grid"/);
+  assert.match(script, /const RESULT_PAGE_SIZE = 24/);
+  assert.match(script, /filtered\.slice\(0, visibleResultCount\)/);
+  assert.match(script, /link\.href = `tools\/\$\{encodeURIComponent\(site\.slug\)\}\/`/);
+  assert.match(script, /createSiteFeedbackUrl/);
+});

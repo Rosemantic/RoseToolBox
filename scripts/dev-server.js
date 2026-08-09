@@ -27,13 +27,18 @@ const types = {
 
 const server = http.createServer((request, response) => {
   const pathname = decodeURIComponent(new URL(request.url, `http://${request.headers.host}`).pathname);
-  const relative = pathname === "/" ? "index.html" : pathname.replace(/^\/+/, "");
-  const file = path.resolve(root, relative);
+  const relative = pathname.replace(/^\/+/, "");
+  const requestedPath = path.resolve(root, relative);
+  const file = pathname.endsWith("/") ? path.join(requestedPath, "index.html") : requestedPath;
   if (!file.startsWith(`${root}${path.sep}`)) {
     response.writeHead(403).end("Forbidden");
     return;
   }
   fs.stat(file, (statError, stats) => {
+    if (!statError && stats.isDirectory()) {
+      response.writeHead(301, { location: `${pathname}/` }).end();
+      return;
+    }
     if (statError || !stats.isFile()) {
       response.writeHead(404).end("Not found");
       return;

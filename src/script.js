@@ -19,6 +19,7 @@ const PLATFORM_LABELS = {
 };
 
 const CATEGORY_ICONS = ["✦", "⌘", "◇", "▦", "✓", "♪", "↗"];
+const RESULT_PAGE_SIZE = 24;
 const COLLECTIONS = [
   {
     id: "ai-starter",
@@ -71,6 +72,7 @@ let backToTopVisible = false;
 let activeDetailSiteId = "";
 let detailTrigger = null;
 let detailClosing = false;
+let visibleResultCount = RESULT_PAGE_SIZE;
 
 const $ = (selector, parent = document) => parent.querySelector(selector);
 const $$ = (selector, parent = document) => [...parent.querySelectorAll(selector)];
@@ -324,6 +326,7 @@ function setupEventListeners() {
 
   $("#reset-filters").addEventListener("click", resetFilters);
   $("#empty-reset").addEventListener("click", resetFilters);
+  $("#load-more").addEventListener("click", loadMoreResults);
   $("#theme-toggle").addEventListener("click", toggleTheme);
   $("#mobile-menu-button").addEventListener("click", openSidebar);
   $("#sidebar-close").addEventListener("click", closeSidebar);
@@ -367,6 +370,7 @@ function setupEventListeners() {
 
   window.addEventListener("popstate", () => {
     readStateFromUrl();
+    visibleResultCount = RESULT_PAGE_SIZE;
     renderAll();
     syncDetailFromUrl();
   });
@@ -382,8 +386,9 @@ function setupEventListeners() {
 function renderAll() {
   syncControls();
   const filtered = getFilteredSites();
-  renderSiteGrid($("#results-grid"), filtered, state.q);
-  updateResultsCopy(filtered.length);
+  const visibleSites = filtered.slice(0, visibleResultCount);
+  renderSiteGrid($("#results-grid"), visibleSites, state.q);
+  updateResultsCopy(filtered.length, visibleSites.length);
   updateNavigationState();
 
   const isHomepage = !state.q && !state.tag && state.category === "all"
@@ -392,7 +397,21 @@ function renderAll() {
   $("#homepage-sections").hidden = !isHomepage;
   $("#empty-state").hidden = filtered.length > 0;
   $("#results-grid").hidden = filtered.length === 0;
+  const loadMore = $("#load-more");
+  const remaining = Math.max(0, filtered.length - visibleSites.length);
+  loadMore.hidden = remaining === 0;
+  loadMore.textContent = remaining > 0
+    ? `加载更多（剩余 ${remaining} 个）`
+    : "已显示全部资源";
   window.RoseToolsAnimations?.resultsChanged($("#results-grid"));
+}
+
+function loadMoreResults() {
+  const previousCount = visibleResultCount;
+  visibleResultCount += RESULT_PAGE_SIZE;
+  renderAll();
+  const firstNewCard = $("#results-grid").children[previousCount];
+  firstNewCard?.querySelector(".site-card-link")?.focus({ preventScroll: true });
 }
 
 function getFilteredSites() {
@@ -437,11 +456,15 @@ function createSiteCard(site, highlightTerm) {
   article.dataset.siteId = site.id;
   article.dataset.siteSlug = site.slug;
 
-  const link = document.createElement("button");
-  link.type = "button";
+  const link = document.createElement("a");
+  link.href = `tools/${encodeURIComponent(site.slug)}/`;
   link.className = "site-card-link";
   link.setAttribute("aria-label", `查看 ${site.name} 的工具详情`);
-  link.addEventListener("click", () => openSiteDetail(site, link, { updateUrl: true }));
+  link.addEventListener("click", (event) => {
+    if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    openSiteDetail(site, link, { updateUrl: true });
+  });
 
   const header = document.createElement("div");
   header.className = "site-card-header";
@@ -665,13 +688,47 @@ function renderSiteDetail(site) {
   visit.rel = "noopener noreferrer";
   visit.setAttribute("aria-label", `访问 ${site.name} 官方网站，在新窗口打开`);
   visit.textContent = "访问官方网站 ↗";
-  actions.append(favorite, visit);
+  const permalink = document.createElement("a");
+  permalink.className = "secondary-button detail-permalink";
+  permalink.href = `tools/${encodeURIComponent(site.slug)}/`;
+  permalink.textContent = "独立详情页";
+  actions.append(favorite, visit, permalink);
+
+  const feedbackUrl = createSiteFeedbackUrl(site);
+  let feedback = null;
+  if (feedbackUrl) {
+    feedback = document.createElement("a");
+    feedback.className = "detail-feedback";
+    feedback.href = feedbackUrl;
+    feedback.target = "_blank";
+    feedback.rel = "noopener noreferrer";
+    feedback.textContent = "链接失效或信息有误？提交反馈";
+  }
 
   body.append(hero, description, meta, tagsSection);
   if (aliasesSection) body.append(aliasesSection);
   if (relatedSection) body.append(relatedSection);
   body.append(actions);
+  if (feedback) body.append(feedback);
   content.replaceChildren(body);
+}
+
+function createSiteFeedbackUrl(site) {
+  const base = typeof SITE_CONFIG === "undefined" ? "" : SITE_CONFIG.feedbackUrl;
+  if (!base) return "";
+  try {
+    const url = new URL(base);
+    if (url.hostname === "github.com" && /\/issues\/new\/?$/.test(url.pathname)) {
+      url.searchParams.set("title", `[资源反馈] ${site.name}`);
+      url.searchParams.set(
+        "body",
+        `工具：${site.name}\n站内标识：${site.slug}\n原网址：${site.url}\n\n问题描述：`,
+      );
+    }
+    return url.href;
+  } catch (_) {
+    return base;
+  }
 }
 
 function appendDetailMeta(list, label, value) {
@@ -766,7 +823,7 @@ function appendHighlightedText(element, text, term) {
   if (cursor < source.length) element.append(document.createTextNode(source.slice(cursor)));
 }
 
-function updateResultsCopy(count) {
+function updateResultsCopy(count, shown = Math.min(count, visibleResultCount)) {
   const title = $("#results-title");
   const kicker = $("#results-kicker");
   let label = "全部资源";
@@ -795,7 +852,9 @@ function updateResultsCopy(count) {
     ? activeCollection.kicker
     : state.view === "favorites" ? "MY COLLECTION" : "DISCOVER RESOURCES";
   $("#breadcrumb").textContent = path;
-  $("#results-summary").textContent = `找到 ${count} 个资源`;
+  $("#results-summary").textContent = shown < count
+    ? `显示 ${shown} / 共 ${count} 个资源`
+    : `找到 ${count} 个资源`;
   document.title = label === "全部资源"
     ? "RoseTools｜设计师与开发者的精选工具导航"
     : `${label}｜RoseTools`;
@@ -825,6 +884,7 @@ function updateNavigationState() {
 }
 
 function commitState() {
+  visibleResultCount = RESULT_PAGE_SIZE;
   writeStateToUrl();
   renderAll();
 }
