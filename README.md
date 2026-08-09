@@ -71,6 +71,15 @@ npm run sync
 - `verifiedAt`：可选的链接人工核验日期；未填写时详情页显示“待核验”，不会把内容更新时间冒充为核验时间。
 - `icon`：可选的项目内图标相对路径（例如 `icons/figma.svg`）；不允许外部 URL，缺省时使用本地首字母图标。
 
+批量从源网站发现 favicon、下载到 `src/assets/icons/` 并更新 `icon` 字段：
+
+```bash
+npm run sync-icons
+npm run build
+```
+
+图标同步会优先访问源网站声明的 favicon；遇到反爬或限流时，仅在维护阶段通过 Icon Horse 获取其缓存的源站 favicon。所有成功结果都会保存到项目内，页面访问者不会连接图标服务。脚本只接受公网 HTTP(S) 地址和受支持的图片格式，限制响应大小与重定向次数，并拒绝私有网络地址。下载失败的站点会继续显示本地首字母占位，不影响构建和浏览。使用 `npm run sync-icons -- --refresh` 可以重新获取已有图标。
+
 仅检查数据、不重新生成文件：
 
 ```bash

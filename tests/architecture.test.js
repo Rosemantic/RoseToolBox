@@ -31,3 +31,10 @@ test("源码、维护脚本与部署产物彼此分离", () => {
     assert.equal(fs.existsSync(path.join(root, file)), false, `${file} 不应出现在该位置`);
   }
 });
+
+test("本地服务器为站点图标返回正确图片类型", () => {
+  const server = fs.readFileSync(path.join(root, "scripts", "dev-server.js"), "utf8");
+  for (const type of ["image/png", "image/x-icon", "image/webp", "image/svg+xml"]) {
+    assert.match(server, new RegExp(type.replace("+", "\\+")));
+  }
+});

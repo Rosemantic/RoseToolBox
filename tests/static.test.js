@@ -42,6 +42,8 @@ test("发布配置集中管理且开发模式检查可通过", () => {
   assert.match(html, /id="og-image"[^>]+og-image\.png/);
   assert.match(html, /property="og:image:width" content="1200"/);
   assert.match(script, /site\.icon && isSafeLocalAsset\(site\.icon\)/);
+  assert.match(script, /wrapper\.className = "site-icon"/);
+  assert.doesNotMatch(script, /wrapper\.className = "site-icon is-fallback"/);
   assert.doesNotMatch(script, /new URL\("\/favicon\.ico"/);
   assert.doesNotMatch(script, /google\.com\/s2\/favicons/i);
   assert.doesNotMatch(html, /feedback@rosetools\.local/);

@@ -87,7 +87,8 @@
         "web"
       ],
       "featured": true,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/chatgpt.png"
     },
     {
       "name": "Claude",
@@ -111,7 +112,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-07"
+      "updatedAt": "2026-08-07",
+      "icon": "icons/claude.ico"
     },
     {
       "name": "Gemini",
@@ -135,7 +137,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-06"
+      "updatedAt": "2026-08-06",
+      "icon": "icons/gemini.png"
     },
     {
       "name": "DeepSeek",
@@ -159,7 +162,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-05"
+      "updatedAt": "2026-08-05",
+      "icon": "icons/deepseek.ico"
     },
     {
       "name": "豆包",
@@ -183,7 +187,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-04"
+      "updatedAt": "2026-08-04",
+      "icon": "icons/doubao-com.png"
     },
     {
       "name": "Kimi",
@@ -204,7 +209,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-03"
+      "updatedAt": "2026-08-03",
+      "icon": "icons/kimi.ico"
     },
     {
       "name": "Cursor",
@@ -226,7 +232,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-02"
+      "updatedAt": "2026-08-02",
+      "icon": "icons/cursor.ico"
     },
     {
       "name": "Windsurf",
@@ -248,7 +255,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-01"
+      "updatedAt": "2026-08-01",
+      "icon": "icons/windsurf.png"
     },
     {
       "name": "Qoder",
@@ -270,7 +278,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-31"
+      "updatedAt": "2026-07-31",
+      "icon": "icons/qoder.png"
     },
     {
       "name": "Trae",
@@ -292,7 +301,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-30"
+      "updatedAt": "2026-07-30",
+      "icon": "icons/trae.png"
     },
     {
       "name": "Liblib",
@@ -314,7 +324,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-29"
+      "updatedAt": "2026-07-29",
+      "icon": "icons/liblib.ico"
     },
     {
       "name": "即梦AI",
@@ -339,7 +350,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-28"
+      "updatedAt": "2026-07-28",
+      "icon": "icons/ai.ico"
     },
     {
       "name": "Midjourney",
@@ -361,7 +373,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-27"
+      "updatedAt": "2026-07-27",
+      "icon": "icons/midjourney.png"
     },
     {
       "name": "Huemint",
@@ -383,7 +396,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-26"
+      "updatedAt": "2026-07-26",
+      "icon": "icons/huemint.png"
     },
     {
       "name": "GitHub",
@@ -408,7 +422,8 @@
         "web"
       ],
       "featured": true,
-      "updatedAt": "2026-07-25"
+      "updatedAt": "2026-07-25",
+      "icon": "icons/github.png"
     },
     {
       "name": "VS Code",
@@ -433,7 +448,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-24"
+      "updatedAt": "2026-07-24",
+      "icon": "icons/vs-code.ico"
     },
     {
       "name": "ReactBits",
@@ -454,7 +470,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-23"
+      "updatedAt": "2026-07-23",
+      "icon": "icons/reactbits.ico"
     },
     {
       "name": "Vue Bits",
@@ -475,7 +492,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-22"
+      "updatedAt": "2026-07-22",
+      "icon": "icons/vue-bits.ico"
     },
     {
       "name": "GSAP",
@@ -496,7 +514,8 @@
         "web"
       ],
       "featured": true,
-      "updatedAt": "2026-07-21"
+      "updatedAt": "2026-07-21",
+      "icon": "icons/gsap.png"
     },
     {
       "name": "Framer Motion",
@@ -517,7 +536,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-20"
+      "updatedAt": "2026-07-20",
+      "icon": "icons/framer-motion.png"
     },
     {
       "name": "Inspira UI",
@@ -539,7 +559,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-19"
+      "updatedAt": "2026-07-19",
+      "icon": "icons/inspira-ui.ico"
     },
     {
       "name": "Fancy Components",
@@ -560,7 +581,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-18"
+      "updatedAt": "2026-07-18",
+      "icon": "icons/fancy-components.png"
     },
     {
       "name": "Uiverse",
@@ -582,7 +604,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-17"
+      "updatedAt": "2026-07-17",
+      "icon": "icons/uiverse.ico"
     },
     {
       "name": "NavNav",
@@ -603,7 +626,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-16"
+      "updatedAt": "2026-07-16",
+      "icon": "icons/navnav.png"
     },
     {
       "name": "Lenis",
@@ -623,7 +647,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-15"
+      "updatedAt": "2026-07-15",
+      "icon": "icons/lenis.png"
     },
     {
       "name": "LottieFiles",
@@ -643,7 +668,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-14"
+      "updatedAt": "2026-07-14",
+      "icon": "icons/lottiefiles.png"
     },
     {
       "name": "SVG路径动画",
@@ -663,7 +689,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-13"
+      "updatedAt": "2026-07-13",
+      "icon": "icons/svg.ico"
     },
     {
       "name": "MDN",
@@ -687,7 +714,8 @@
         "web"
       ],
       "featured": true,
-      "updatedAt": "2026-07-12"
+      "updatedAt": "2026-07-12",
+      "icon": "icons/mdn.png"
     },
     {
       "name": "BootCDN",
@@ -708,7 +736,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-11"
+      "updatedAt": "2026-07-11",
+      "icon": "icons/bootcdn.ico"
     },
     {
       "name": "Cursor Directory",
@@ -729,7 +758,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-10"
+      "updatedAt": "2026-07-10",
+      "icon": "icons/cursor-directory.png"
     },
     {
       "name": "Cursor Rules CN",
@@ -750,7 +780,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-09"
+      "updatedAt": "2026-07-09",
+      "icon": "icons/cursor-rules-cn.png"
     },
     {
       "name": "CodePen",
@@ -771,7 +802,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-08"
+      "updatedAt": "2026-07-08",
+      "icon": "icons/codepen.png"
     },
     {
       "name": "Figma",
@@ -795,7 +827,8 @@
         "web"
       ],
       "featured": true,
-      "updatedAt": "2026-07-07"
+      "updatedAt": "2026-07-07",
+      "icon": "icons/figma.png"
     },
     {
       "name": "Framer",
@@ -816,7 +849,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-06"
+      "updatedAt": "2026-07-06",
+      "icon": "icons/framer.png"
     },
     {
       "name": "Webflow",
@@ -838,7 +872,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-05"
+      "updatedAt": "2026-07-05",
+      "icon": "icons/webflow.png"
     },
     {
       "name": "Canva",
@@ -862,7 +897,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-04"
+      "updatedAt": "2026-07-04",
+      "icon": "icons/canva.ico"
     },
     {
       "name": "稿定",
@@ -883,7 +919,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-03"
+      "updatedAt": "2026-07-03",
+      "icon": "icons/gaoding-com.ico"
     },
     {
       "name": "Remove.bg",
@@ -905,7 +942,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-02"
+      "updatedAt": "2026-07-02",
+      "icon": "icons/remove-bg.png"
     },
     {
       "name": "佐糖",
@@ -927,7 +965,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-01"
+      "updatedAt": "2026-07-01",
+      "icon": "icons/picwish-cn.png"
     },
     {
       "name": "D.design 抠图",
@@ -948,7 +987,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-06-30"
+      "updatedAt": "2026-06-30",
+      "icon": "icons/d-design.webp"
     },
     {
       "name": "HappyHues",
@@ -969,7 +1009,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-06-29"
+      "updatedAt": "2026-06-29",
+      "icon": "icons/happyhues.png"
     },
     {
       "name": "FontAwesome",
@@ -990,7 +1031,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-06-28"
+      "updatedAt": "2026-06-28",
+      "icon": "icons/fontawesome.ico"
     },
     {
       "name": "Lordicon",
@@ -1011,7 +1053,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-06-27"
+      "updatedAt": "2026-06-27",
+      "icon": "icons/lordicon.png"
     },
     {
       "name": "IconFinder",
@@ -1032,7 +1075,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-06-26"
+      "updatedAt": "2026-06-26",
+      "icon": "icons/iconfinder.ico"
     },
     {
       "name": "阿里巴巴矢量图标库",
@@ -1053,7 +1097,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-06-25"
+      "updatedAt": "2026-06-25",
+      "icon": "icons/iconfont-cn.webp"
     },
     {
       "name": "求字体",
@@ -1074,7 +1119,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/qiuziti-com.ico"
     },
     {
       "name": "字体搬运工",
@@ -1095,7 +1141,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-07"
+      "updatedAt": "2026-08-07",
+      "icon": "icons/font-sucai999-com.png"
     },
     {
       "name": "猫啃网",
@@ -1117,7 +1164,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-06"
+      "updatedAt": "2026-08-06",
+      "icon": "icons/maoken-com.ico"
     },
     {
       "name": "Unsplash",
@@ -1141,7 +1189,8 @@
         "web"
       ],
       "featured": true,
-      "updatedAt": "2026-08-05"
+      "updatedAt": "2026-08-05",
+      "icon": "icons/unsplash.ico"
     },
     {
       "name": "Pexels",
@@ -1163,7 +1212,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-04"
+      "updatedAt": "2026-08-04",
+      "icon": "icons/pexels.png"
     },
     {
       "name": "Pixabay",
@@ -1185,7 +1235,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-03"
+      "updatedAt": "2026-08-03",
+      "icon": "icons/pixabay.png"
     },
     {
       "name": "彼岸桌面",
@@ -1205,7 +1256,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-02"
+      "updatedAt": "2026-08-02",
+      "icon": "icons/netbian-com.ico"
     },
     {
       "name": "暖糖",
@@ -1225,7 +1277,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-01"
+      "updatedAt": "2026-08-01",
+      "icon": "icons/nuantang-net.ico"
     },
     {
       "name": "哲风壁纸",
@@ -1245,7 +1298,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-31"
+      "updatedAt": "2026-07-31",
+      "icon": "icons/haowallpaper-com.ico"
     },
     {
       "name": "千图网",
@@ -1268,7 +1322,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-30"
+      "updatedAt": "2026-07-30",
+      "icon": "icons/58pic-com.ico"
     },
     {
       "name": "觅知网",
@@ -1289,7 +1344,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-29"
+      "updatedAt": "2026-07-29",
+      "icon": "icons/51miz-com.ico"
     },
     {
       "name": "包图网",
@@ -1310,7 +1366,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-28"
+      "updatedAt": "2026-07-28",
+      "icon": "icons/ibaotu-com.ico"
     },
     {
       "name": "站长素材",
@@ -1332,7 +1389,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-27"
+      "updatedAt": "2026-07-27",
+      "icon": "icons/sc-chinaz-com.ico"
     },
     {
       "name": "享设计",
@@ -1353,7 +1411,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-26"
+      "updatedAt": "2026-07-26",
+      "icon": "icons/design006-com.ico"
     },
     {
       "name": "标小智",
@@ -1374,7 +1433,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-25"
+      "updatedAt": "2026-07-25",
+      "icon": "icons/logosc-cn.svg"
     },
     {
       "name": "钙网",
@@ -1396,7 +1456,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-24"
+      "updatedAt": "2026-07-24",
+      "icon": "icons/uugai-com.ico"
     },
     {
       "name": "Notion",
@@ -1419,7 +1480,8 @@
         "web"
       ],
       "featured": true,
-      "updatedAt": "2026-07-23"
+      "updatedAt": "2026-07-23",
+      "icon": "icons/notion.ico"
     },
     {
       "name": "草料二维码",
@@ -1439,7 +1501,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-22"
+      "updatedAt": "2026-07-22",
+      "icon": "icons/cli-im.ico"
     },
     {
       "name": "Hotkey CheatSheet",
@@ -1459,7 +1522,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-21"
+      "updatedAt": "2026-07-21",
+      "icon": "icons/hotkey-cheatsheet.png"
     },
     {
       "name": "Text-to-Speech",
@@ -1479,7 +1543,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-20"
+      "updatedAt": "2026-07-20",
+      "icon": "icons/text-to-speech.png"
     },
     {
       "name": "XMind",
@@ -1499,7 +1564,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-19"
+      "updatedAt": "2026-07-19",
+      "icon": "icons/xmind.ico"
     },
     {
       "name": "Typora",
@@ -1519,7 +1585,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-18"
+      "updatedAt": "2026-07-18",
+      "icon": "icons/typora.png"
     },
     {
       "name": "Snipaste",
@@ -1539,7 +1606,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-17"
+      "updatedAt": "2026-07-17",
+      "icon": "icons/snipaste.ico"
     },
     {
       "name": "Mocreak",
@@ -1559,7 +1627,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-16"
+      "updatedAt": "2026-07-16",
+      "icon": "icons/mocreak.ico"
     },
     {
       "name": "Vowa",
@@ -1579,7 +1648,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-15"
+      "updatedAt": "2026-07-15",
+      "icon": "icons/vowa.png"
     },
     {
       "name": "LestVPN",
@@ -1599,7 +1669,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-14"
+      "updatedAt": "2026-07-14",
+      "icon": "icons/lestvpn.png"
     },
     {
       "name": "SiteInspire",
@@ -1620,7 +1691,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-13"
+      "updatedAt": "2026-07-13",
+      "icon": "icons/siteinspire.png"
     },
     {
       "name": "Awwwards",
@@ -1641,7 +1713,8 @@
         "web"
       ],
       "featured": true,
-      "updatedAt": "2026-07-12"
+      "updatedAt": "2026-07-12",
+      "icon": "icons/awwwards.svg"
     },
     {
       "name": "Dribbble",
@@ -1662,7 +1735,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-11"
+      "updatedAt": "2026-07-11",
+      "icon": "icons/dribbble.png"
     },
     {
       "name": "站酷",
@@ -1683,7 +1757,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-10"
+      "updatedAt": "2026-07-10",
+      "icon": "icons/zcool-com-cn.ico"
     },
     {
       "name": "中国知网",
@@ -1703,7 +1778,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-09"
+      "updatedAt": "2026-07-09",
+      "icon": "icons/cnki-net.ico"
     },
     {
       "name": "Grammarly",
@@ -1724,7 +1800,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-08"
+      "updatedAt": "2026-07-08",
+      "icon": "icons/grammarly.png"
     },
     {
       "name": "DeepL",
@@ -1745,7 +1822,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-07"
+      "updatedAt": "2026-07-07",
+      "icon": "icons/deepl.ico"
     },
     {
       "name": "QuillBot",
@@ -1766,7 +1844,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-06"
+      "updatedAt": "2026-07-06",
+      "icon": "icons/quillbot.ico"
     },
     {
       "name": "Aibiye",
@@ -1787,7 +1866,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-05"
+      "updatedAt": "2026-07-05",
+      "icon": "icons/aibiye.ico"
     },
     {
       "name": "AI工具集",
@@ -1808,7 +1888,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-04"
+      "updatedAt": "2026-07-04",
+      "icon": "icons/ai-2.png"
     },
     {
       "name": "Haitangw",
@@ -1829,7 +1910,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-03"
+      "updatedAt": "2026-07-03",
+      "icon": "icons/haitangw.png"
     },
     {
       "name": "Awesome Lists",
@@ -1849,7 +1931,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-02"
+      "updatedAt": "2026-07-02",
+      "icon": "icons/awesome-lists.png"
     },
     {
       "name": "奇迹秀",
@@ -1871,7 +1954,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-07-01"
+      "updatedAt": "2026-07-01",
+      "icon": "icons/qijishow-com.ico"
     },
     {
       "name": "软仓",
@@ -1891,7 +1975,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-06-30"
+      "updatedAt": "2026-06-30",
+      "icon": "icons/ruancang-net.ico"
     },
     {
       "name": "Netflix",
@@ -1911,7 +1996,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-06-29"
+      "updatedAt": "2026-06-29",
+      "icon": "icons/netflix.png"
     },
     {
       "name": "YouTube",
@@ -1931,7 +2017,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-06-28"
+      "updatedAt": "2026-06-28",
+      "icon": "icons/youtube.png"
     },
     {
       "name": "哔哩哔哩",
@@ -1954,7 +2041,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-06-27"
+      "updatedAt": "2026-06-27",
+      "icon": "icons/bilibili-com.ico"
     },
     {
       "name": "腾讯视频",
@@ -1974,7 +2062,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-06-26"
+      "updatedAt": "2026-06-26",
+      "icon": "icons/v-qq-com.ico"
     },
     {
       "name": "爱奇艺",
@@ -1994,7 +2083,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-06-25"
+      "updatedAt": "2026-06-25",
+      "icon": "icons/iqiyi-com.ico"
     },
     {
       "name": "优酷视频",
@@ -2014,7 +2104,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/youku-com.ico"
     },
     {
       "name": "抖音",
@@ -2034,7 +2125,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-07"
+      "updatedAt": "2026-08-07",
+      "icon": "icons/douyin-com.ico"
     },
     {
       "name": "小红书",
@@ -2057,7 +2149,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-06"
+      "updatedAt": "2026-08-06",
+      "icon": "icons/xiaohongshu-com.ico"
     },
     {
       "name": "QQ音乐",
@@ -2077,7 +2170,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-05"
+      "updatedAt": "2026-08-05",
+      "icon": "icons/qq.ico"
     },
     {
       "name": "网易云音乐",
@@ -2100,7 +2194,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-04"
+      "updatedAt": "2026-08-04",
+      "icon": "icons/music-163-com.ico"
     },
     {
       "name": "Spotify",
@@ -2120,7 +2215,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-03"
+      "updatedAt": "2026-08-03",
+      "icon": "icons/spotify.ico"
     },
     {
       "name": "米你AI",
@@ -2144,7 +2240,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/ai-3.ico"
     },
     {
       "name": "Gamma",
@@ -2169,7 +2266,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/gamma.png"
     },
     {
       "name": "Lovart",
@@ -2193,7 +2291,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/lovart.ico"
     },
     {
       "name": "建筑学长",
@@ -2215,7 +2314,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/resource.ico"
     },
     {
       "name": "Meshy",
@@ -2239,7 +2339,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/meshy.png"
     },
     {
       "name": "MotionSites",
@@ -2263,7 +2364,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/motionsites.png"
     },
     {
       "name": "Loading UI",
@@ -2287,7 +2389,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/loading-ui.ico"
     },
     {
       "name": "21st.dev",
@@ -2311,7 +2414,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/21st-dev.png"
     },
     {
       "name": "OriginKit",
@@ -2335,7 +2439,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/originkit.png"
     },
     {
       "name": "StringTune",
@@ -2359,7 +2464,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/stringtune.ico"
     },
     {
       "name": "Stitch",
@@ -2383,7 +2489,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/stitch.png"
     },
     {
       "name": "千库网",
@@ -2407,7 +2514,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/resource-2.ico"
     },
     {
       "name": "花瓣网",
@@ -2431,7 +2539,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/resource-3.ico"
     },
     {
       "name": "潮国创意",
@@ -2455,7 +2564,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/resource-4.ico"
     },
     {
       "name": "大美工",
@@ -2479,7 +2589,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/resource-5.ico"
     },
     {
       "name": "AiShort",
@@ -2504,7 +2615,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/aishort.ico"
     },
     {
       "name": "秋裤工具箱",
@@ -2528,7 +2640,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/resource-6.png"
     },
     {
       "name": "猫猫云",
@@ -2552,7 +2665,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/resource-7.ico"
     },
     {
       "name": "PackyAPI",
@@ -2576,7 +2690,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/packyapi.ico"
     },
     {
       "name": "极简画廊",
@@ -2600,7 +2715,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/resource-8.png"
     },
     {
       "name": "Logo System",
@@ -2624,7 +2740,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/logo-system.png"
     },
     {
       "name": "Webzibition",
@@ -2648,7 +2765,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/webzibition.png"
     },
     {
       "name": "Godly",
@@ -2672,7 +2790,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/godly.svg"
     },
     {
       "name": "Site of Sites",
@@ -2696,7 +2815,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/site-of-sites.png"
     },
     {
       "name": "Recent Design",
@@ -2720,7 +2840,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-08-08"
+      "updatedAt": "2026-08-08",
+      "icon": "icons/recent-design.svg"
     }
   ],
   "meta": {

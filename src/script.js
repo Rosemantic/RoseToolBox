@@ -480,7 +480,7 @@ function createSiteCard(site, highlightTerm) {
 
 function createSiteIcon(site) {
   const wrapper = document.createElement("span");
-  wrapper.className = "site-icon is-fallback";
+  wrapper.className = "site-icon";
   wrapper.style.setProperty("--icon-hue", String(getIconHue(site.name)));
   const fallback = document.createElement("span");
   fallback.className = "site-icon-fallback";
@@ -501,6 +501,8 @@ function createSiteIcon(site) {
     image.addEventListener("error", () => wrapper.classList.add("is-fallback"), { once: true });
     image.src = site.icon;
     wrapper.append(image);
+  } else {
+    wrapper.classList.add("is-fallback");
   }
 
   wrapper.append(fallback);
