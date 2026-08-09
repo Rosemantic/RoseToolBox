@@ -1,0 +1,2732 @@
+{
+  "categories": [
+    {
+      "name": "AI 工具",
+      "subcategories": [
+        "AI 对话助手",
+        "AI 编程工具",
+        "AI 设计工具"
+      ]
+    },
+    {
+      "name": "开发编程",
+      "subcategories": [
+        "代码托管",
+        "开发环境",
+        "前端框架/库",
+        "组件库",
+        "动画工具",
+        "开发文档",
+        "代码展示"
+      ]
+    },
+    {
+      "name": "设计创作",
+      "subcategories": [
+        "UI/UX 设计",
+        "在线设计",
+        "图像处理",
+        "配色工具"
+      ]
+    },
+    {
+      "name": "素材资源",
+      "subcategories": [
+        "图标",
+        "字体",
+        "图库",
+        "壁纸",
+        "综合素材",
+        "LOGO 工具"
+      ]
+    },
+    {
+      "name": "效率工具",
+      "subcategories": [
+        "实用工具"
+      ]
+    },
+    {
+      "name": "影音娱乐",
+      "subcategories": [
+        "视频流媒体",
+        "音乐平台"
+      ]
+    },
+    {
+      "name": "灵感与学习",
+      "subcategories": [
+        "设计灵感",
+        "学术写作",
+        "资源导航"
+      ]
+    }
+  ],
+  "sites": [
+    {
+      "name": "ChatGPT",
+      "url": "https://chat.openai.com/",
+      "category": "AI 工具",
+      "subcategory": "AI 对话助手",
+      "description": "OpenAI 的智能对话与编程助手",
+      "id": "site-001",
+      "slug": "chatgpt",
+      "tags": [
+        "AI 工具",
+        "AI 对话助手",
+        "AI",
+        "开发"
+      ],
+      "aliases": [
+        "openai",
+        "聊天机器人",
+        "大模型"
+      ],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": true,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "Claude",
+      "url": "https://claude.ai/",
+      "category": "AI 工具",
+      "subcategory": "AI 对话助手",
+      "description": "Anthropic 推出的 AI 智能对话助手",
+      "id": "site-002",
+      "slug": "claude",
+      "tags": [
+        "AI 工具",
+        "AI 对话助手",
+        "AI"
+      ],
+      "aliases": [
+        "anthropic",
+        "大模型"
+      ],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-07"
+    },
+    {
+      "name": "Gemini",
+      "url": "https://gemini.google.com/",
+      "category": "AI 工具",
+      "subcategory": "AI 对话助手",
+      "description": "Google 推出的 AI 对话与创作工具",
+      "id": "site-003",
+      "slug": "gemini",
+      "tags": [
+        "AI 工具",
+        "AI 对话助手",
+        "AI"
+      ],
+      "aliases": [
+        "google ai",
+        "谷歌 ai"
+      ],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-06"
+    },
+    {
+      "name": "DeepSeek",
+      "url": "https://www.deepseek.com/",
+      "category": "AI 工具",
+      "subcategory": "AI 对话助手",
+      "description": "国产深度学习 AI 对话助手",
+      "id": "site-004",
+      "slug": "deepseek",
+      "tags": [
+        "AI 工具",
+        "AI 对话助手",
+        "AI"
+      ],
+      "aliases": [
+        "深度求索",
+        "大模型"
+      ],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-05"
+    },
+    {
+      "name": "豆包",
+      "url": "https://www.doubao.com/",
+      "category": "AI 工具",
+      "subcategory": "AI 对话助手",
+      "description": "字节跳动推出的 AI 智能对话助手",
+      "id": "site-005",
+      "slug": "doubao-com",
+      "tags": [
+        "AI 工具",
+        "AI 对话助手",
+        "AI"
+      ],
+      "aliases": [
+        "doubao",
+        "字节跳动 ai"
+      ],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-04"
+    },
+    {
+      "name": "Kimi",
+      "url": "https://kimi.moonshot.cn/",
+      "category": "AI 工具",
+      "subcategory": "AI 对话助手",
+      "description": "Moonshot AI 推出的智能助手，擅长长文本处理",
+      "id": "site-006",
+      "slug": "kimi",
+      "tags": [
+        "AI 工具",
+        "AI 对话助手",
+        "AI"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-03"
+    },
+    {
+      "name": "Cursor",
+      "url": "https://cursor.com/cn",
+      "category": "AI 工具",
+      "subcategory": "AI 编程工具",
+      "description": "基于 AI 的智能编程 IDE",
+      "id": "site-007",
+      "slug": "cursor",
+      "tags": [
+        "AI 工具",
+        "AI 编程工具",
+        "AI",
+        "开发"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-02"
+    },
+    {
+      "name": "Windsurf",
+      "url": "https://windsurf.com/",
+      "category": "AI 工具",
+      "subcategory": "AI 编程工具",
+      "description": "AI 驱动的代码编辑器和开发工具",
+      "id": "site-008",
+      "slug": "windsurf",
+      "tags": [
+        "AI 工具",
+        "AI 编程工具",
+        "AI",
+        "开发"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-01"
+    },
+    {
+      "name": "Qoder",
+      "url": "https://qoder.com/",
+      "category": "AI 工具",
+      "subcategory": "AI 编程工具",
+      "description": "智能代码开发工具",
+      "id": "site-009",
+      "slug": "qoder",
+      "tags": [
+        "AI 工具",
+        "AI 编程工具",
+        "AI",
+        "开发"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-31"
+    },
+    {
+      "name": "Trae",
+      "url": "https://trae.ai/",
+      "category": "AI 工具",
+      "subcategory": "AI 编程工具",
+      "description": "AI 辅助的开发与团队协作工具",
+      "id": "site-010",
+      "slug": "trae",
+      "tags": [
+        "AI 工具",
+        "AI 编程工具",
+        "AI",
+        "开发"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-30"
+    },
+    {
+      "name": "Liblib",
+      "url": "https://www.liblib.art/",
+      "category": "AI 工具",
+      "subcategory": "AI 设计工具",
+      "description": "AI 绘画与插画素材库",
+      "id": "site-011",
+      "slug": "liblib",
+      "tags": [
+        "AI 工具",
+        "AI 设计工具",
+        "AI",
+        "设计"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-29"
+    },
+    {
+      "name": "即梦AI",
+      "url": "https://jimeng.jianying.com/",
+      "category": "AI 工具",
+      "subcategory": "AI 设计工具",
+      "description": "字节跳动旗下 AI 绘画创作平台",
+      "id": "site-012",
+      "slug": "ai",
+      "tags": [
+        "AI 工具",
+        "AI 设计工具",
+        "AI",
+        "设计"
+      ],
+      "aliases": [
+        "jimeng",
+        "即梦"
+      ],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-28"
+    },
+    {
+      "name": "Midjourney",
+      "url": "https://www.midjourney.com/",
+      "category": "AI 工具",
+      "subcategory": "AI 设计工具",
+      "description": "领先的 AI 艺术图像生成工具",
+      "id": "site-013",
+      "slug": "midjourney",
+      "tags": [
+        "AI 工具",
+        "AI 设计工具",
+        "AI",
+        "设计"
+      ],
+      "aliases": [],
+      "pricing": "paid",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-27"
+    },
+    {
+      "name": "Huemint",
+      "url": "https://huemint.com/",
+      "category": "AI 工具",
+      "subcategory": "AI 设计工具",
+      "description": "AI 驱动的配色方案生成工具",
+      "id": "site-014",
+      "slug": "huemint",
+      "tags": [
+        "AI 工具",
+        "AI 设计工具",
+        "AI",
+        "设计"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-26"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/",
+      "category": "开发编程",
+      "subcategory": "代码托管",
+      "description": "全球最大开源代码托管与协作平台",
+      "id": "site-015",
+      "slug": "github",
+      "tags": [
+        "开发编程",
+        "代码托管",
+        "开发",
+        "免费资源"
+      ],
+      "aliases": [
+        "代码托管",
+        "开源社区"
+      ],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": true,
+      "updatedAt": "2026-07-25"
+    },
+    {
+      "name": "VS Code",
+      "url": "https://code.visualstudio.com/",
+      "category": "开发编程",
+      "subcategory": "开发环境",
+      "description": "微软出品的轻量级开源代码编辑器",
+      "id": "site-016",
+      "slug": "vs-code",
+      "tags": [
+        "开发编程",
+        "开发环境",
+        "开发",
+        "免费资源"
+      ],
+      "aliases": [
+        "vscode",
+        "代码编辑器"
+      ],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-24"
+    },
+    {
+      "name": "ReactBits",
+      "url": "https://www.reactbits.dev/",
+      "category": "开发编程",
+      "subcategory": "前端框架/库",
+      "description": "React 开发技巧和模式集合",
+      "id": "site-017",
+      "slug": "reactbits",
+      "tags": [
+        "开发编程",
+        "前端框架/库",
+        "开发"
+      ],
+      "aliases": [],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-23"
+    },
+    {
+      "name": "Vue Bits",
+      "url": "https://vue-bits.dev/",
+      "category": "开发编程",
+      "subcategory": "前端框架/库",
+      "description": "Vue 开发组件库",
+      "id": "site-018",
+      "slug": "vue-bits",
+      "tags": [
+        "开发编程",
+        "前端框架/库",
+        "开发"
+      ],
+      "aliases": [],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-22"
+    },
+    {
+      "name": "GSAP",
+      "url": "https://gsap.com/",
+      "category": "开发编程",
+      "subcategory": "前端框架/库",
+      "description": "专业级 JavaScript 动画库",
+      "id": "site-019",
+      "slug": "gsap",
+      "tags": [
+        "开发编程",
+        "前端框架/库",
+        "开发"
+      ],
+      "aliases": [],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": true,
+      "updatedAt": "2026-07-21"
+    },
+    {
+      "name": "Framer Motion",
+      "url": "https://www.framer.com/motion/",
+      "category": "开发编程",
+      "subcategory": "前端框架/库",
+      "description": "React 动画库，简单而强大",
+      "id": "site-020",
+      "slug": "framer-motion",
+      "tags": [
+        "开发编程",
+        "前端框架/库",
+        "开发"
+      ],
+      "aliases": [],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-20"
+    },
+    {
+      "name": "Inspira UI",
+      "url": "https://v1.inspira-ui.com/",
+      "category": "开发编程",
+      "subcategory": "组件库",
+      "description": "现代 React UI 组件库",
+      "id": "site-021",
+      "slug": "inspira-ui",
+      "tags": [
+        "开发编程",
+        "组件库",
+        "设计",
+        "开发"
+      ],
+      "aliases": [],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-19"
+    },
+    {
+      "name": "Fancy Components",
+      "url": "https://www.fancycomponents.dev/",
+      "category": "开发编程",
+      "subcategory": "组件库",
+      "description": "各类前端组件代码示例",
+      "id": "site-022",
+      "slug": "fancy-components",
+      "tags": [
+        "开发编程",
+        "组件库",
+        "开发"
+      ],
+      "aliases": [],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-18"
+    },
+    {
+      "name": "Uiverse",
+      "url": "https://uiverse.io/",
+      "category": "开发编程",
+      "subcategory": "组件库",
+      "description": "开源 UI 样式与小组件集合",
+      "id": "site-023",
+      "slug": "uiverse",
+      "tags": [
+        "开发编程",
+        "组件库",
+        "设计",
+        "免费资源"
+      ],
+      "aliases": [],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-17"
+    },
+    {
+      "name": "NavNav",
+      "url": "https://navnav.co/",
+      "category": "开发编程",
+      "subcategory": "组件库",
+      "description": "导航栏 UI 组件示例库",
+      "id": "site-024",
+      "slug": "navnav",
+      "tags": [
+        "开发编程",
+        "组件库",
+        "设计"
+      ],
+      "aliases": [],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-16"
+    },
+    {
+      "name": "Lenis",
+      "url": "https://lenis.darkroom.engineering/",
+      "category": "开发编程",
+      "subcategory": "动画工具",
+      "description": "平滑滚动动画库",
+      "id": "site-025",
+      "slug": "lenis",
+      "tags": [
+        "开发编程",
+        "动画工具"
+      ],
+      "aliases": [],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-15"
+    },
+    {
+      "name": "LottieFiles",
+      "url": "https://lottiefiles.com/",
+      "category": "开发编程",
+      "subcategory": "动画工具",
+      "description": "JSON 动画文件分享与工具",
+      "id": "site-026",
+      "slug": "lottiefiles",
+      "tags": [
+        "开发编程",
+        "动画工具"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-14"
+    },
+    {
+      "name": "SVG路径动画",
+      "url": "https://tools.ui-layouts.com/",
+      "category": "开发编程",
+      "subcategory": "动画工具",
+      "description": "创意工具箱（阴影、SVG、渐变和背景图案生成器）",
+      "id": "site-027",
+      "slug": "svg",
+      "tags": [
+        "开发编程",
+        "动画工具"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-13"
+    },
+    {
+      "name": "MDN",
+      "url": "https://developer.mozilla.org/zh-CN/",
+      "category": "开发编程",
+      "subcategory": "开发文档",
+      "description": "Web 技术与前端开发权威文档",
+      "id": "site-028",
+      "slug": "mdn",
+      "tags": [
+        "开发编程",
+        "开发文档",
+        "开发"
+      ],
+      "aliases": [
+        "mozilla",
+        "web 文档"
+      ],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": true,
+      "updatedAt": "2026-07-12"
+    },
+    {
+      "name": "BootCDN",
+      "url": "https://www.bootcdn.cn/",
+      "category": "开发编程",
+      "subcategory": "开发文档",
+      "description": "中国前端公共 CDN 服务",
+      "id": "site-029",
+      "slug": "bootcdn",
+      "tags": [
+        "开发编程",
+        "开发文档",
+        "开发"
+      ],
+      "aliases": [],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-11"
+    },
+    {
+      "name": "Cursor Directory",
+      "url": "https://cursor.directory/",
+      "category": "开发编程",
+      "subcategory": "开发文档",
+      "description": "Cursor 英文规则和教程",
+      "id": "site-030",
+      "slug": "cursor-directory",
+      "tags": [
+        "开发编程",
+        "开发文档",
+        "开发"
+      ],
+      "aliases": [],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-10"
+    },
+    {
+      "name": "Cursor Rules CN",
+      "url": "https://cursorrulescn.cn/",
+      "category": "开发编程",
+      "subcategory": "开发文档",
+      "description": "Cursor 中文规则与教程",
+      "id": "site-031",
+      "slug": "cursor-rules-cn",
+      "tags": [
+        "开发编程",
+        "开发文档",
+        "开发"
+      ],
+      "aliases": [],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-09"
+    },
+    {
+      "name": "CodePen",
+      "url": "https://codepen.io/",
+      "category": "开发编程",
+      "subcategory": "代码展示",
+      "description": "前端在线编写与展示平台",
+      "id": "site-032",
+      "slug": "codepen",
+      "tags": [
+        "开发编程",
+        "代码展示",
+        "开发"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-08"
+    },
+    {
+      "name": "Figma",
+      "url": "https://www.figma.com/",
+      "category": "设计创作",
+      "subcategory": "UI/UX 设计",
+      "description": "在线协作式 UI/UX 设计工具",
+      "id": "site-033",
+      "slug": "figma",
+      "tags": [
+        "设计创作",
+        "UI/UX 设计",
+        "设计"
+      ],
+      "aliases": [
+        "界面设计",
+        "原型设计"
+      ],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": true,
+      "updatedAt": "2026-07-07"
+    },
+    {
+      "name": "Framer",
+      "url": "https://www.framer.com/",
+      "category": "设计创作",
+      "subcategory": "UI/UX 设计",
+      "description": "集设计、原型和网站构建于一体的现代化工具",
+      "id": "site-034",
+      "slug": "framer",
+      "tags": [
+        "设计创作",
+        "UI/UX 设计",
+        "设计"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-06"
+    },
+    {
+      "name": "Webflow",
+      "url": "https://webflow.com/",
+      "category": "设计创作",
+      "subcategory": "UI/UX 设计",
+      "description": "可视化网站设计与开发平台",
+      "id": "site-035",
+      "slug": "webflow",
+      "tags": [
+        "设计创作",
+        "UI/UX 设计",
+        "设计",
+        "开发"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-05"
+    },
+    {
+      "name": "Canva",
+      "url": "https://www.canva.com/",
+      "category": "设计创作",
+      "subcategory": "UI/UX 设计",
+      "description": "在线平面设计与海报制作工具",
+      "id": "site-036",
+      "slug": "canva",
+      "tags": [
+        "设计创作",
+        "UI/UX 设计",
+        "设计"
+      ],
+      "aliases": [
+        "可画",
+        "在线设计"
+      ],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-04"
+    },
+    {
+      "name": "稿定",
+      "url": "https://www.gaoding.com/",
+      "category": "设计创作",
+      "subcategory": "在线设计",
+      "description": "在线海报与平面设计平台",
+      "id": "site-037",
+      "slug": "gaoding-com",
+      "tags": [
+        "设计创作",
+        "在线设计",
+        "设计"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-03"
+    },
+    {
+      "name": "Remove.bg",
+      "url": "https://www.remove.bg/zh",
+      "category": "设计创作",
+      "subcategory": "图像处理",
+      "description": "智能抠图与去背景工具",
+      "id": "site-038",
+      "slug": "remove-bg",
+      "tags": [
+        "设计创作",
+        "图像处理",
+        "AI",
+        "设计"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-02"
+    },
+    {
+      "name": "佐糖",
+      "url": "https://picwish.cn/",
+      "category": "设计创作",
+      "subcategory": "图像处理",
+      "description": "AI 图片编辑与背景处理工具",
+      "id": "site-039",
+      "slug": "picwish-cn",
+      "tags": [
+        "设计创作",
+        "图像处理",
+        "AI",
+        "设计"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-01"
+    },
+    {
+      "name": "D.design 抠图",
+      "url": "https://d.design/toolbox/cutout",
+      "category": "设计创作",
+      "subcategory": "图像处理",
+      "description": "在线抠图与图像分割工具",
+      "id": "site-040",
+      "slug": "d-design",
+      "tags": [
+        "设计创作",
+        "图像处理",
+        "设计"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-06-30"
+    },
+    {
+      "name": "HappyHues",
+      "url": "https://www.happyhues.co/",
+      "category": "设计创作",
+      "subcategory": "配色工具",
+      "description": "提供配色灵感与调色板",
+      "id": "site-041",
+      "slug": "happyhues",
+      "tags": [
+        "设计创作",
+        "配色工具",
+        "设计"
+      ],
+      "aliases": [],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-06-29"
+    },
+    {
+      "name": "FontAwesome",
+      "url": "https://fontawesome.com.cn/",
+      "category": "素材资源",
+      "subcategory": "图标",
+      "description": "最常用的图标库",
+      "id": "site-042",
+      "slug": "fontawesome",
+      "tags": [
+        "素材资源",
+        "图标",
+        "设计"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-06-28"
+    },
+    {
+      "name": "Lordicon",
+      "url": "https://lordicon.com/",
+      "category": "素材资源",
+      "subcategory": "图标",
+      "description": "动态矢量图标库",
+      "id": "site-043",
+      "slug": "lordicon",
+      "tags": [
+        "素材资源",
+        "图标",
+        "设计"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-06-27"
+    },
+    {
+      "name": "IconFinder",
+      "url": "https://www.iconfinder.com/",
+      "category": "素材资源",
+      "subcategory": "图标",
+      "description": "高质量矢量图标搜索引擎",
+      "id": "site-044",
+      "slug": "iconfinder",
+      "tags": [
+        "素材资源",
+        "图标",
+        "设计"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-06-26"
+    },
+    {
+      "name": "阿里巴巴矢量图标库",
+      "url": "https://www.iconfont.cn/",
+      "category": "素材资源",
+      "subcategory": "图标",
+      "description": "阿里巴巴矢量图标库",
+      "id": "site-045",
+      "slug": "iconfont-cn",
+      "tags": [
+        "素材资源",
+        "图标",
+        "设计"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-06-25"
+    },
+    {
+      "name": "求字体",
+      "url": "https://www.qiuziti.com/",
+      "category": "素材资源",
+      "subcategory": "字体",
+      "description": "字体识别与下载",
+      "id": "site-046",
+      "slug": "qiuziti-com",
+      "tags": [
+        "素材资源",
+        "字体",
+        "设计"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "字体搬运工",
+      "url": "https://font.sucai999.com/",
+      "category": "素材资源",
+      "subcategory": "字体",
+      "description": "中文与艺术字体下载",
+      "id": "site-047",
+      "slug": "font-sucai999-com",
+      "tags": [
+        "素材资源",
+        "字体",
+        "设计"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-07"
+    },
+    {
+      "name": "猫啃网",
+      "url": "https://www.maoken.com/",
+      "category": "素材资源",
+      "subcategory": "字体",
+      "description": "无版权可免费商用中文字体下载网站!",
+      "id": "site-048",
+      "slug": "maoken-com",
+      "tags": [
+        "素材资源",
+        "字体",
+        "设计",
+        "免费资源"
+      ],
+      "aliases": [],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-06"
+    },
+    {
+      "name": "Unsplash",
+      "url": "https://unsplash.com/",
+      "category": "素材资源",
+      "subcategory": "图库",
+      "description": "高质量免费摄影图库",
+      "id": "site-049",
+      "slug": "unsplash",
+      "tags": [
+        "素材资源",
+        "图库",
+        "免费资源"
+      ],
+      "aliases": [
+        "免费图片",
+        "摄影图库"
+      ],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": true,
+      "updatedAt": "2026-08-05"
+    },
+    {
+      "name": "Pexels",
+      "url": "https://www.pexels.com/zh-cn/",
+      "category": "素材资源",
+      "subcategory": "图库",
+      "description": "免费摄影与视频素材库",
+      "id": "site-050",
+      "slug": "pexels",
+      "tags": [
+        "素材资源",
+        "图库",
+        "设计",
+        "免费资源"
+      ],
+      "aliases": [],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-04"
+    },
+    {
+      "name": "Pixabay",
+      "url": "https://pixabay.com/",
+      "category": "素材资源",
+      "subcategory": "图库",
+      "description": "海量免费图片、插画与视频素材",
+      "id": "site-051",
+      "slug": "pixabay",
+      "tags": [
+        "素材资源",
+        "图库",
+        "设计",
+        "免费资源"
+      ],
+      "aliases": [],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-03"
+    },
+    {
+      "name": "彼岸桌面",
+      "url": "http://www.netbian.com/",
+      "category": "素材资源",
+      "subcategory": "壁纸",
+      "description": "高清电脑与手机壁纸网站",
+      "id": "site-052",
+      "slug": "netbian-com",
+      "tags": [
+        "素材资源",
+        "壁纸"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-02"
+    },
+    {
+      "name": "暖糖",
+      "url": "https://www.nuantang.net/",
+      "category": "素材资源",
+      "subcategory": "壁纸",
+      "description": "高清动漫与风景壁纸",
+      "id": "site-053",
+      "slug": "nuantang-net",
+      "tags": [
+        "素材资源",
+        "壁纸"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-01"
+    },
+    {
+      "name": "哲风壁纸",
+      "url": "https://haowallpaper.com/",
+      "category": "素材资源",
+      "subcategory": "壁纸",
+      "description": "精品高清壁纸资源库",
+      "id": "site-054",
+      "slug": "haowallpaper-com",
+      "tags": [
+        "素材资源",
+        "壁纸"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-31"
+    },
+    {
+      "name": "千图网",
+      "url": "https://www.58pic.com/",
+      "category": "素材资源",
+      "subcategory": "综合素材",
+      "description": "提供设计模板、图片、插画与创意素材的综合平台",
+      "id": "site-055",
+      "slug": "58pic-com",
+      "tags": [
+        "素材资源",
+        "综合素材",
+        "设计"
+      ],
+      "aliases": [
+        "58pic"
+      ],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-30"
+    },
+    {
+      "name": "觅知网",
+      "url": "https://www.51miz.com/",
+      "category": "素材资源",
+      "subcategory": "综合素材",
+      "description": "平面设计模板、海报、插画等商用设计素材",
+      "id": "site-056",
+      "slug": "51miz-com",
+      "tags": [
+        "素材资源",
+        "综合素材",
+        "设计"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-29"
+    },
+    {
+      "name": "包图网",
+      "url": "https://ibaotu.com/",
+      "category": "素材资源",
+      "subcategory": "综合素材",
+      "description": "广告设计、电商设计等各类原创素材模板",
+      "id": "site-057",
+      "slug": "ibaotu-com",
+      "tags": [
+        "素材资源",
+        "综合素材",
+        "设计"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-28"
+    },
+    {
+      "name": "站长素材",
+      "url": "https://sc.chinaz.com/",
+      "category": "素材资源",
+      "subcategory": "综合素材",
+      "description": "综合设计与开发素材站",
+      "id": "site-058",
+      "slug": "sc-chinaz-com",
+      "tags": [
+        "素材资源",
+        "综合素材",
+        "设计",
+        "开发"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-27"
+    },
+    {
+      "name": "享设计",
+      "url": "https://www.design006.com/",
+      "category": "素材资源",
+      "subcategory": "综合素材",
+      "description": "设计素材资源网站",
+      "id": "site-059",
+      "slug": "design006-com",
+      "tags": [
+        "素材资源",
+        "综合素材",
+        "设计"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-26"
+    },
+    {
+      "name": "标小智",
+      "url": "https://www.logosc.cn/",
+      "category": "素材资源",
+      "subcategory": "LOGO 工具",
+      "description": "AI LOGO 生成器",
+      "id": "site-060",
+      "slug": "logosc-cn",
+      "tags": [
+        "素材资源",
+        "LOGO 工具",
+        "AI"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-25"
+    },
+    {
+      "name": "钙网",
+      "url": "https://www.uugai.com/",
+      "category": "素材资源",
+      "subcategory": "LOGO 工具",
+      "description": "免费LOGO在线设计制作工具",
+      "id": "site-061",
+      "slug": "uugai-com",
+      "tags": [
+        "素材资源",
+        "LOGO 工具",
+        "设计",
+        "免费资源"
+      ],
+      "aliases": [],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-24"
+    },
+    {
+      "name": "Notion",
+      "url": "https://www.notion.so/",
+      "category": "效率工具",
+      "subcategory": "实用工具",
+      "description": "知识库与项目管理工具",
+      "id": "site-062",
+      "slug": "notion",
+      "tags": [
+        "效率工具",
+        "实用工具"
+      ],
+      "aliases": [
+        "笔记",
+        "知识库"
+      ],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": true,
+      "updatedAt": "2026-07-23"
+    },
+    {
+      "name": "草料二维码",
+      "url": "https://cli.im/",
+      "category": "效率工具",
+      "subcategory": "实用工具",
+      "description": "在线二维码生成器",
+      "id": "site-063",
+      "slug": "cli-im",
+      "tags": [
+        "效率工具",
+        "实用工具"
+      ],
+      "aliases": [],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-22"
+    },
+    {
+      "name": "Hotkey CheatSheet",
+      "url": "https://hotkeycheatsheet.com/",
+      "category": "效率工具",
+      "subcategory": "实用工具",
+      "description": "快捷键速查工具",
+      "id": "site-064",
+      "slug": "hotkey-cheatsheet",
+      "tags": [
+        "效率工具",
+        "实用工具"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-21"
+    },
+    {
+      "name": "Text-to-Speech",
+      "url": "https://www.text-to-speech.cn/",
+      "category": "效率工具",
+      "subcategory": "实用工具",
+      "description": "在线文字转语音工具",
+      "id": "site-065",
+      "slug": "text-to-speech",
+      "tags": [
+        "效率工具",
+        "实用工具"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-20"
+    },
+    {
+      "name": "XMind",
+      "url": "https://xmind.cn/",
+      "category": "效率工具",
+      "subcategory": "实用工具",
+      "description": "专业思维导图与头脑风暴工具",
+      "id": "site-066",
+      "slug": "xmind",
+      "tags": [
+        "效率工具",
+        "实用工具"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-19"
+    },
+    {
+      "name": "Typora",
+      "url": "https://typoraio.cn/",
+      "category": "效率工具",
+      "subcategory": "实用工具",
+      "description": "简洁优雅的 Markdown 编辑器",
+      "id": "site-067",
+      "slug": "typora",
+      "tags": [
+        "效率工具",
+        "实用工具"
+      ],
+      "aliases": [],
+      "pricing": "paid",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-18"
+    },
+    {
+      "name": "Snipaste",
+      "url": "https://zh.snipaste.com/",
+      "category": "效率工具",
+      "subcategory": "实用工具",
+      "description": "简单高效的截图与贴图工具",
+      "id": "site-068",
+      "slug": "snipaste",
+      "tags": [
+        "效率工具",
+        "实用工具"
+      ],
+      "aliases": [],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-17"
+    },
+    {
+      "name": "Mocreak",
+      "url": "https://www.mocreak.com/",
+      "category": "效率工具",
+      "subcategory": "实用工具",
+      "description": "Office 办公增强与部署工具",
+      "id": "site-069",
+      "slug": "mocreak",
+      "tags": [
+        "效率工具",
+        "实用工具"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-16"
+    },
+    {
+      "name": "Vowa",
+      "url": "https://vowa.lat/",
+      "category": "效率工具",
+      "subcategory": "实用工具",
+      "description": "VPN 网络代理工具，安全访问网络资源",
+      "id": "site-070",
+      "slug": "vowa",
+      "tags": [
+        "效率工具",
+        "实用工具"
+      ],
+      "aliases": [],
+      "pricing": "paid",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-15"
+    },
+    {
+      "name": "LestVPN",
+      "url": "https://letsvpn.world/",
+      "category": "效率工具",
+      "subcategory": "实用工具",
+      "description": "快速稳定的 VPN 网络代理服务",
+      "id": "site-071",
+      "slug": "lestvpn",
+      "tags": [
+        "效率工具",
+        "实用工具"
+      ],
+      "aliases": [],
+      "pricing": "paid",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-14"
+    },
+    {
+      "name": "SiteInspire",
+      "url": "https://www.siteinspire.com/",
+      "category": "灵感与学习",
+      "subcategory": "设计灵感",
+      "description": "网页设计灵感展示平台",
+      "id": "site-072",
+      "slug": "siteinspire",
+      "tags": [
+        "灵感与学习",
+        "设计灵感",
+        "设计"
+      ],
+      "aliases": [],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-13"
+    },
+    {
+      "name": "Awwwards",
+      "url": "https://www.awwwards.com/",
+      "category": "灵感与学习",
+      "subcategory": "设计灵感",
+      "description": "国际网页设计奖与灵感库",
+      "id": "site-073",
+      "slug": "awwwards",
+      "tags": [
+        "灵感与学习",
+        "设计灵感",
+        "设计"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": true,
+      "updatedAt": "2026-07-12"
+    },
+    {
+      "name": "Dribbble",
+      "url": "https://dribbble.com/",
+      "category": "灵感与学习",
+      "subcategory": "设计灵感",
+      "description": "全球设计师作品分享与灵感社区",
+      "id": "site-074",
+      "slug": "dribbble",
+      "tags": [
+        "灵感与学习",
+        "设计灵感",
+        "设计"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-11"
+    },
+    {
+      "name": "站酷",
+      "url": "https://www.zcool.com.cn/",
+      "category": "灵感与学习",
+      "subcategory": "设计灵感",
+      "description": "设计师互动平台",
+      "id": "site-075",
+      "slug": "zcool-com-cn",
+      "tags": [
+        "灵感与学习",
+        "设计灵感",
+        "设计"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-10"
+    },
+    {
+      "name": "中国知网",
+      "url": "https://www.cnki.net/",
+      "category": "灵感与学习",
+      "subcategory": "学术写作",
+      "description": "中国学术文献、论文、期刊数据库",
+      "id": "site-076",
+      "slug": "cnki-net",
+      "tags": [
+        "灵感与学习",
+        "学术写作"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-09"
+    },
+    {
+      "name": "Grammarly",
+      "url": "https://www.grammarly.com/",
+      "category": "灵感与学习",
+      "subcategory": "学术写作",
+      "description": "AI 驱动的英语语法检查和写作优化工具",
+      "id": "site-077",
+      "slug": "grammarly",
+      "tags": [
+        "灵感与学习",
+        "学术写作",
+        "AI"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-08"
+    },
+    {
+      "name": "DeepL",
+      "url": "https://www.deepl.com/",
+      "category": "灵感与学习",
+      "subcategory": "学术写作",
+      "description": "高质量 AI 翻译工具，支持多国语言",
+      "id": "site-078",
+      "slug": "deepl",
+      "tags": [
+        "灵感与学习",
+        "学术写作",
+        "AI"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-07"
+    },
+    {
+      "name": "QuillBot",
+      "url": "https://quillbot.com/",
+      "category": "灵感与学习",
+      "subcategory": "学术写作",
+      "description": "AI 写作辅助、改写和语法优化工具",
+      "id": "site-079",
+      "slug": "quillbot",
+      "tags": [
+        "灵感与学习",
+        "学术写作",
+        "AI"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-06"
+    },
+    {
+      "name": "Aibiye",
+      "url": "https://www.aibiye.com/",
+      "category": "灵感与学习",
+      "subcategory": "学术写作",
+      "description": "AI 论文写作指导平台",
+      "id": "site-080",
+      "slug": "aibiye",
+      "tags": [
+        "灵感与学习",
+        "学术写作",
+        "AI"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-05"
+    },
+    {
+      "name": "AI工具集",
+      "url": "https://ai-bot.cn/",
+      "category": "灵感与学习",
+      "subcategory": "资源导航",
+      "description": "各类 AI 工具导航",
+      "id": "site-081",
+      "slug": "ai-2",
+      "tags": [
+        "灵感与学习",
+        "资源导航",
+        "AI"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-04"
+    },
+    {
+      "name": "Haitangw",
+      "url": "https://www.haitangw.cc/",
+      "category": "灵感与学习",
+      "subcategory": "资源导航",
+      "description": "综合素材与设计资源导航",
+      "id": "site-082",
+      "slug": "haitangw",
+      "tags": [
+        "灵感与学习",
+        "资源导航",
+        "设计"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-03"
+    },
+    {
+      "name": "Awesome Lists",
+      "url": "https://github.com/sindresorhus/awesome",
+      "category": "灵感与学习",
+      "subcategory": "资源导航",
+      "description": "GitHub 上的精选资源合集",
+      "id": "site-083",
+      "slug": "awesome-lists",
+      "tags": [
+        "灵感与学习",
+        "资源导航"
+      ],
+      "aliases": [],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-02"
+    },
+    {
+      "name": "奇迹秀",
+      "url": "https://qijishow.com/",
+      "category": "灵感与学习",
+      "subcategory": "资源导航",
+      "description": "公益性设计资源平台，提供免费设计教程、工具和素材",
+      "id": "site-084",
+      "slug": "qijishow-com",
+      "tags": [
+        "灵感与学习",
+        "资源导航",
+        "设计",
+        "免费资源"
+      ],
+      "aliases": [],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-07-01"
+    },
+    {
+      "name": "软仓",
+      "url": "https://www.ruancang.net/",
+      "category": "灵感与学习",
+      "subcategory": "资源导航",
+      "description": "软件资源下载与工具集合",
+      "id": "site-085",
+      "slug": "ruancang-net",
+      "tags": [
+        "灵感与学习",
+        "资源导航"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-06-30"
+    },
+    {
+      "name": "Netflix",
+      "url": "https://www.netflix.com/",
+      "category": "影音娱乐",
+      "subcategory": "视频流媒体",
+      "description": "全球领先的流媒体视频平台",
+      "id": "site-086",
+      "slug": "netflix",
+      "tags": [
+        "影音娱乐",
+        "视频流媒体"
+      ],
+      "aliases": [],
+      "pricing": "paid",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-06-29"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://www.youtube.com/",
+      "category": "影音娱乐",
+      "subcategory": "视频流媒体",
+      "description": "全球最大的视频分享平台",
+      "id": "site-087",
+      "slug": "youtube",
+      "tags": [
+        "影音娱乐",
+        "视频流媒体"
+      ],
+      "aliases": [],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-06-28"
+    },
+    {
+      "name": "哔哩哔哩",
+      "url": "https://www.bilibili.com/",
+      "category": "影音娱乐",
+      "subcategory": "视频流媒体",
+      "description": "国内领先的年轻人文化社区和视频平台",
+      "id": "site-088",
+      "slug": "bilibili-com",
+      "tags": [
+        "影音娱乐",
+        "视频流媒体"
+      ],
+      "aliases": [
+        "bilibili",
+        "b站"
+      ],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-06-27"
+    },
+    {
+      "name": "腾讯视频",
+      "url": "https://v.qq.com/",
+      "category": "影音娱乐",
+      "subcategory": "视频流媒体",
+      "description": "腾讯旗下综合视频平台",
+      "id": "site-089",
+      "slug": "v-qq-com",
+      "tags": [
+        "影音娱乐",
+        "视频流媒体"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-06-26"
+    },
+    {
+      "name": "爱奇艺",
+      "url": "https://www.iqiyi.com/",
+      "category": "影音娱乐",
+      "subcategory": "视频流媒体",
+      "description": "国内知名在线视频平台",
+      "id": "site-090",
+      "slug": "iqiyi-com",
+      "tags": [
+        "影音娱乐",
+        "视频流媒体"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-06-25"
+    },
+    {
+      "name": "优酷视频",
+      "url": "https://www.youku.com/",
+      "category": "影音娱乐",
+      "subcategory": "视频流媒体",
+      "description": "阿里巴巴旗下视频平台",
+      "id": "site-091",
+      "slug": "youku-com",
+      "tags": [
+        "影音娱乐",
+        "视频流媒体"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "抖音",
+      "url": "https://www.douyin.com/",
+      "category": "影音娱乐",
+      "subcategory": "视频流媒体",
+      "description": "短视频社交平台",
+      "id": "site-092",
+      "slug": "douyin-com",
+      "tags": [
+        "影音娱乐",
+        "视频流媒体"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-07"
+    },
+    {
+      "name": "小红书",
+      "url": "https://www.xiaohongshu.com/",
+      "category": "影音娱乐",
+      "subcategory": "视频流媒体",
+      "description": "生活方式分享与购物种草社区",
+      "id": "site-093",
+      "slug": "xiaohongshu-com",
+      "tags": [
+        "影音娱乐",
+        "视频流媒体"
+      ],
+      "aliases": [
+        "xiaohongshu",
+        "rednote"
+      ],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-06"
+    },
+    {
+      "name": "QQ音乐",
+      "url": "https://y.qq.com/",
+      "category": "影音娱乐",
+      "subcategory": "音乐平台",
+      "description": "腾讯旗下在线音乐平台",
+      "id": "site-094",
+      "slug": "qq",
+      "tags": [
+        "影音娱乐",
+        "音乐平台"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-05"
+    },
+    {
+      "name": "网易云音乐",
+      "url": "https://music.163.com/",
+      "category": "影音娱乐",
+      "subcategory": "音乐平台",
+      "description": "网易旗下音乐流媒体平台",
+      "id": "site-095",
+      "slug": "music-163-com",
+      "tags": [
+        "影音娱乐",
+        "音乐平台"
+      ],
+      "aliases": [
+        "netease music",
+        "云村"
+      ],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-04"
+    },
+    {
+      "name": "Spotify",
+      "url": "https://www.spotify.com/",
+      "category": "影音娱乐",
+      "subcategory": "音乐平台",
+      "description": "全球领先的音乐流媒体服务",
+      "id": "site-096",
+      "slug": "spotify",
+      "tags": [
+        "影音娱乐",
+        "音乐平台"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-03"
+    },
+    {
+      "name": "米你AI",
+      "url": "https://www.miai.pro/list",
+      "category": "AI 工具",
+      "subcategory": "AI 设计工具",
+      "description": "聚合 AI 绘画模型与创作资源的设计平台",
+      "id": "site-097",
+      "slug": "ai-3",
+      "tags": [
+        "AI 工具",
+        "AI 设计工具",
+        "AI 绘画",
+        "模型资源"
+      ],
+      "aliases": [
+        "Miai"
+      ],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "Gamma",
+      "url": "https://gamma.app/",
+      "category": "AI 工具",
+      "subcategory": "AI 设计工具",
+      "description": "使用 AI 快速生成演示文稿、文档和网页",
+      "id": "site-098",
+      "slug": "gamma",
+      "tags": [
+        "AI 工具",
+        "AI 设计工具",
+        "AI 演示",
+        "幻灯片"
+      ],
+      "aliases": [
+        "Gamma AI",
+        "Gammas"
+      ],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "Lovart",
+      "url": "https://www.lovart.ai/zh/home",
+      "category": "AI 工具",
+      "subcategory": "AI 设计工具",
+      "description": "面向品牌与视觉创作的 AI 设计智能体",
+      "id": "site-099",
+      "slug": "lovart",
+      "tags": [
+        "AI 工具",
+        "AI 设计工具",
+        "AI 设计",
+        "品牌设计"
+      ],
+      "aliases": [
+        "洛瓦特"
+      ],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "建筑学长",
+      "url": "https://www.jianzhuxuezhang.com/",
+      "category": "AI 工具",
+      "subcategory": "AI 设计工具",
+      "description": "面向建筑师的 AI 建筑设计与创作平台",
+      "id": "site-100",
+      "slug": "resource",
+      "tags": [
+        "AI 工具",
+        "AI 设计工具",
+        "建筑设计",
+        "AI 建筑"
+      ],
+      "aliases": [],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "Meshy",
+      "url": "https://www.meshy.ai/zh/?noRedirect=true",
+      "category": "AI 工具",
+      "subcategory": "AI 设计工具",
+      "description": "通过文字或图片生成 3D 模型与贴图",
+      "id": "site-101",
+      "slug": "meshy",
+      "tags": [
+        "AI 工具",
+        "AI 设计工具",
+        "AI 3D",
+        "3D 模型"
+      ],
+      "aliases": [
+        "Meshy AI"
+      ],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "MotionSites",
+      "url": "https://motionsites.ai/",
+      "category": "AI 工具",
+      "subcategory": "AI 设计工具",
+      "description": "精选动态网站案例与 AI 网站设计提示词",
+      "id": "site-102",
+      "slug": "motionsites",
+      "tags": [
+        "AI 工具",
+        "AI 设计工具",
+        "动态网站",
+        "提示词"
+      ],
+      "aliases": [
+        "Motion Sites"
+      ],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "Loading UI",
+      "url": "https://loading-ui.com/",
+      "category": "开发编程",
+      "subcategory": "组件库",
+      "description": "可直接使用的加载动画、旋转指示器与 CSS 代码",
+      "id": "site-103",
+      "slug": "loading-ui",
+      "tags": [
+        "开发编程",
+        "组件库",
+        "加载动画",
+        "CSS"
+      ],
+      "aliases": [
+        "Loading UI Components"
+      ],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "21st.dev",
+      "url": "https://21st.dev/home",
+      "category": "开发编程",
+      "subcategory": "组件库",
+      "description": "面向现代前端与 AI 应用的组件和开发工具目录",
+      "id": "site-104",
+      "slug": "21st-dev",
+      "tags": [
+        "开发编程",
+        "组件库",
+        "UI 组件",
+        "AI 开发"
+      ],
+      "aliases": [
+        "21st"
+      ],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "OriginKit",
+      "url": "https://www.originkit.dev/",
+      "category": "开发编程",
+      "subcategory": "组件库",
+      "description": "适用于现代网站的免费动画组件库",
+      "id": "site-105",
+      "slug": "originkit",
+      "tags": [
+        "开发编程",
+        "组件库",
+        "动画组件",
+        "前端组件"
+      ],
+      "aliases": [
+        "Origin Kit"
+      ],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "StringTune",
+      "url": "https://string-tune.fiddle.digital/",
+      "category": "开发编程",
+      "subcategory": "动画工具",
+      "description": "可视化调节并生成创意弦线动画的在线工具",
+      "id": "site-106",
+      "slug": "stringtune",
+      "tags": [
+        "开发编程",
+        "动画工具",
+        "交互动画",
+        "创意开发"
+      ],
+      "aliases": [
+        "String Tune"
+      ],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "Stitch",
+      "url": "https://stitch.withgoogle.com/",
+      "category": "设计创作",
+      "subcategory": "UI/UX 设计",
+      "description": "Google 推出的 AI 界面设计与前端原型工具",
+      "id": "site-107",
+      "slug": "stitch",
+      "tags": [
+        "设计创作",
+        "UI/UX 设计",
+        "AI UI",
+        "原型设计"
+      ],
+      "aliases": [
+        "Google Stitch"
+      ],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "千库网",
+      "url": "https://588ku.com/",
+      "category": "素材资源",
+      "subcategory": "综合素材",
+      "description": "提供 PNG、背景、模板与办公设计素材",
+      "id": "site-108",
+      "slug": "resource-2",
+      "tags": [
+        "素材资源",
+        "综合素材",
+        "设计模板",
+        "PNG 素材"
+      ],
+      "aliases": [
+        "588ku"
+      ],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "花瓣网",
+      "url": "https://huaban.com/discovery",
+      "category": "素材资源",
+      "subcategory": "综合素材",
+      "description": "发现并收藏设计、插画、摄影与视觉创意灵感",
+      "id": "site-109",
+      "slug": "resource-3",
+      "tags": [
+        "素材资源",
+        "综合素材",
+        "设计灵感",
+        "视觉采集"
+      ],
+      "aliases": [
+        "Huaban"
+      ],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "潮国创意",
+      "url": "https://chaopx.com/",
+      "category": "素材资源",
+      "subcategory": "综合素材",
+      "description": "原创 3D、电商、海报与可商用设计素材库",
+      "id": "site-110",
+      "slug": "resource-4",
+      "tags": [
+        "素材资源",
+        "综合素材",
+        "3D 素材",
+        "商用素材"
+      ],
+      "aliases": [
+        "潮国"
+      ],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "大美工",
+      "url": "https://dameigong.cn/",
+      "category": "素材资源",
+      "subcategory": "综合素材",
+      "description": "面向电商与平面设计的优选素材和模板平台",
+      "id": "site-111",
+      "slug": "resource-5",
+      "tags": [
+        "素材资源",
+        "综合素材",
+        "电商设计",
+        "设计模板"
+      ],
+      "aliases": [
+        "Dameigong"
+      ],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "AiShort",
+      "url": "https://www.aishort.top/?tags=ai",
+      "category": "效率工具",
+      "subcategory": "实用工具",
+      "description": "分类整理的 AI 提示词模板与生产力指令库",
+      "id": "site-112",
+      "slug": "aishort",
+      "tags": [
+        "效率工具",
+        "实用工具",
+        "提示词",
+        "AI 效率"
+      ],
+      "aliases": [
+        "AI Short",
+        "Prompt 提示词"
+      ],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "秋裤工具箱",
+      "url": "http://qiukuai.top/",
+      "category": "效率工具",
+      "subcategory": "实用工具",
+      "description": "面向 CorelDRAW 用户的 AI 智能设计插件工具箱",
+      "id": "site-113",
+      "slug": "resource-6",
+      "tags": [
+        "效率工具",
+        "实用工具",
+        "CorelDRAW",
+        "设计插件"
+      ],
+      "aliases": [
+        "秋裤 AI"
+      ],
+      "pricing": "freemium",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "猫猫云",
+      "url": "https://love.mmy234.com/",
+      "category": "效率工具",
+      "subcategory": "实用工具",
+      "description": "提供多线路选择的网络连接服务",
+      "id": "site-114",
+      "slug": "resource-7",
+      "tags": [
+        "效率工具",
+        "实用工具",
+        "网络工具",
+        "跨平台"
+      ],
+      "aliases": [
+        "Maomao Cloud"
+      ],
+      "pricing": "paid",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "PackyAPI",
+      "url": "https://www.packyapi.com/",
+      "category": "效率工具",
+      "subcategory": "实用工具",
+      "description": "为开发和自动化场景提供统一的模型 API 服务",
+      "id": "site-115",
+      "slug": "packyapi",
+      "tags": [
+        "效率工具",
+        "实用工具",
+        "API",
+        "AI 开发"
+      ],
+      "aliases": [
+        "Packy API"
+      ],
+      "pricing": "paid",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "极简画廊",
+      "url": "https://minimal.gallery/",
+      "category": "灵感与学习",
+      "subcategory": "设计灵感",
+      "description": "精选极简网站、设计工具与优秀域名案例",
+      "id": "site-116",
+      "slug": "resource-8",
+      "tags": [
+        "灵感与学习",
+        "设计灵感",
+        "极简设计",
+        "网页灵感"
+      ],
+      "aliases": [
+        "Minimal Gallery"
+      ],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "Logo System",
+      "url": "https://logosystem.co/",
+      "category": "灵感与学习",
+      "subcategory": "设计灵感",
+      "description": "按行业与风格浏览千余个品牌标志设计案例",
+      "id": "site-117",
+      "slug": "logo-system",
+      "tags": [
+        "灵感与学习",
+        "设计灵感",
+        "Logo 灵感",
+        "品牌设计"
+      ],
+      "aliases": [
+        "LogoSystem"
+      ],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "Webzibition",
+      "url": "https://tympanus.net/codrops/webzibition/",
+      "category": "灵感与学习",
+      "subcategory": "设计灵感",
+      "description": "Codrops 策划的实验性网页设计与创意交互展览",
+      "id": "site-118",
+      "slug": "webzibition",
+      "tags": [
+        "灵感与学习",
+        "设计灵感",
+        "创意网页",
+        "Codrops"
+      ],
+      "aliases": [
+        "Codrops Webzibition"
+      ],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "Godly",
+      "url": "https://godly.website/",
+      "category": "灵感与学习",
+      "subcategory": "设计灵感",
+      "description": "收录高质量网站和数字产品的网页设计灵感库",
+      "id": "site-119",
+      "slug": "godly",
+      "tags": [
+        "灵感与学习",
+        "设计灵感",
+        "网页灵感",
+        "数字设计"
+      ],
+      "aliases": [
+        "Godly Website"
+      ],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "Site of Sites",
+      "url": "https://www.siteofsites.co/",
+      "category": "灵感与学习",
+      "subcategory": "设计灵感",
+      "description": "聚合全球优秀网站案例的设计灵感画廊",
+      "id": "site-120",
+      "slug": "site-of-sites",
+      "tags": [
+        "灵感与学习",
+        "设计灵感",
+        "网页灵感",
+        "网站画廊"
+      ],
+      "aliases": [
+        "SOS"
+      ],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    },
+    {
+      "name": "Recent Design",
+      "url": "https://recent.design/",
+      "category": "灵感与学习",
+      "subcategory": "设计灵感",
+      "description": "持续更新的产品、网页与视觉设计灵感集合",
+      "id": "site-121",
+      "slug": "recent-design",
+      "tags": [
+        "灵感与学习",
+        "设计灵感",
+        "最新设计",
+        "产品灵感"
+      ],
+      "aliases": [
+        "最新设计灵感"
+      ],
+      "pricing": "free",
+      "platforms": [
+        "web"
+      ],
+      "featured": false,
+      "updatedAt": "2026-08-08"
+    }
+  ],
+  "meta": {
+    "title": "RoseTools",
+    "description": "为设计师与开发者精选实用工具、灵感与优质资源。",
+    "updatedAt": "2026-08-08",
+    "version": 3
+  }
+}

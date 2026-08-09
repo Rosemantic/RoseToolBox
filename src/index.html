@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f8fc" />
+    <meta
+      name="description"
+      content="RoseTools 为设计师与开发者精选 AI、开发、设计、效率与灵感资源。"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:title" content="RoseTools｜设计师与开发者的精选工具导航" />
+    <meta
+      property="og:description"
+      content="发现经过整理的设计、开发、AI 与效率工具。"
+    />
+    <meta id="og-image" property="og:image" content="og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="RoseTools 为设计师与开发者精选实用工具" />
+    <meta id="og-url" property="og:url" content="./" />
+    <meta name="twitter:card" content="summary" />
+    <title>RoseTools｜设计师与开发者的精选工具导航</title>
+    <link id="canonical-link" rel="canonical" href="./" />
+    <link rel="icon" href="Logo.svg" type="image/svg+xml" />
+    <link id="manifest-link" rel="manifest" />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      (() => {
+        if (location.protocol === "http:" || location.protocol === "https:") {
+          document.getElementById("manifest-link").href = "manifest.webmanifest";
+        }
+
+        try {
+          const saved = localStorage.getItem("rosetools-theme");
+          const dark = saved
+            ? saved === "dark"
+            : matchMedia("(prefers-color-scheme: dark)").matches;
+          document.documentElement.dataset.theme = dark ? "dark" : "light";
+        } catch (_) {}
+
+        try {
+          const savedMotion = localStorage.getItem("rosetools-motion");
+          const systemReduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+          const reduced = savedMotion === "reduced" || (savedMotion !== "full" && systemReduced);
+          document.documentElement.dataset.motionPreference = savedMotion || "system";
+          document.documentElement.dataset.motion = reduced ? "reduced" : "ready";
+        } catch (_) {
+          document.documentElement.dataset.motion = "ready";
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+
+    <button
+      class="mobile-menu-button icon-button"
+      id="mobile-menu-button"
+      type="button"
+      aria-label="打开分类菜单"
+      aria-controls="sidebar"
+      aria-expanded="false"
+    >
+      <svg aria-hidden="true" viewBox="0 0 24 24">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </svg>
+    </button>
+
+    <aside class="sidebar" id="sidebar" aria-label="资源导航">
+      <div class="brand-row">
+        <a class="brand" href="./" aria-label="RoseTools 首页">
+          <img src="Logo.svg" alt="" width="42" height="42" />
+          <span>
+            <strong>RoseTools</strong>
+            <small>精选资源导航</small>
+          </span>
+        </a>
+        <button
+          class="icon-button sidebar-close"
+          id="sidebar-close"
+          type="button"
+          aria-label="关闭分类菜单"
+        >
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="m6 6 12 12M18 6 6 18" />
+          </svg>
+        </button>
+      </div>
+
+      <nav class="category-navigation" aria-labelledby="category-title">
+        <div class="section-label" id="category-title">浏览分类</div>
+        <div id="category-nav"></div>
+      </nav>
+
+      <section class="collection-tools" aria-labelledby="collection-title">
+        <div class="section-label" id="collection-title">我的收藏</div>
+        <p><span id="favorite-count">0</span> 个收藏，仅保存在当前浏览器。</p>
+        <div class="collection-actions">
+          <button class="text-button" id="export-favorites" type="button">导出</button>
+          <button class="text-button" id="import-favorites" type="button">导入</button>
+          <button class="text-button danger" id="clear-favorites" type="button">清空</button>
+          <input id="favorite-file" type="file" accept="application/json,.json" hidden />
+        </div>
+      </section>
+
+      <div class="sidebar-footer">
+        <button
+          class="theme-button motion-button"
+          id="motion-toggle"
+          type="button"
+          aria-pressed="false"
+          aria-describedby="motion-hint"
+        >
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1M7.7 16.3l-2.1 2.1" />
+            <path d="m10 9 5 3-5 3Z" />
+          </svg>
+          <span id="motion-label">动效：正在检测</span>
+        </button>
+        <span class="motion-hint" id="motion-hint">可覆盖系统的减少动态效果设置</span>
+        <button class="theme-button" id="theme-toggle" type="button" aria-pressed="false">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M12 3v2m0 14v2M3 12h2m14 0h2M5.64 5.64l1.42 1.42m9.88 9.88 1.42 1.42m0-12.72-1.42 1.42M7.06 16.94l-1.42 1.42" />
+            <circle cx="12" cy="12" r="4" />
+          </svg>
+          <span id="theme-label">切换主题</span>
+        </button>
+      </div>
+    </aside>
+
+    <div class="sidebar-overlay" id="sidebar-overlay" hidden></div>
+
+    <main class="page-shell" id="main-content">
+      <header class="topbar">
+        <a href="./" class="mobile-brand" aria-label="RoseTools 首页">
+          <img src="Logo.svg" alt="" width="34" height="34" />
+          <strong>RoseTools</strong>
+        </a>
+        <p><span id="total-sites">0</span> 个精选资源</p>
+      </header>
+
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <span class="eyebrow">CURATED FOR CREATORS</span>
+          <h1 id="hero-title"><span>为设计师与开发者</span><br /><span>精选实用工具</span></h1>
+          <p>少一点寻找，多一点创造。收录真正值得打开的设计、开发、AI 与效率资源。</p>
+        </div>
+        <div class="search-panel">
+          <label class="search-box" for="search-input">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="7" />
+              <path d="m20 20-4-4" />
+            </svg>
+            <input
+              id="search-input"
+              type="search"
+              autocomplete="off"
+              placeholder="搜索工具、分类或标签…"
+              aria-describedby="search-hint"
+            />
+            <kbd id="search-shortcut">Ctrl K</kbd>
+          </label>
+          <p id="search-hint">支持名称、简介、分类、标签和中英文别名</p>
+        </div>
+      </section>
+
+      <section class="popular-tags" aria-labelledby="popular-tags-title">
+        <h2 id="popular-tags-title">热门标签</h2>
+        <div id="popular-tags-list" class="tag-list"></div>
+      </section>
+
+      <section class="discovery-toolbar" aria-label="资源筛选">
+        <div class="breadcrumb" id="breadcrumb" aria-live="polite">首页 / 全部资源</div>
+        <div class="filters">
+          <label>
+            <span>分类</span>
+            <select id="category-filter"><option value="all">全部分类</option></select>
+          </label>
+          <label>
+            <span>价格</span>
+            <select id="pricing-filter">
+              <option value="all">全部价格</option>
+              <option value="free">免费</option>
+              <option value="freemium">免费增值</option>
+              <option value="paid">付费</option>
+            </select>
+          </label>
+          <label>
+            <span>平台</span>
+            <select id="platform-filter">
+              <option value="all">全部平台</option>
+              <option value="web">网页</option>
+              <option value="windows">Windows</option>
+              <option value="macos">macOS</option>
+              <option value="mobile">移动端</option>
+            </select>
+          </label>
+          <button class="reset-button" id="reset-filters" type="button">重置</button>
+        </div>
+      </section>
+
+      <div id="homepage-sections">
+        <section class="content-section collections-section" aria-labelledby="collections-title">
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">CURATED COLLECTIONS</span>
+              <h2 id="collections-title">场景合集</h2>
+            </div>
+            <p>按真实使用场景快速找到一组好工具</p>
+          </div>
+          <div class="collection-grid" id="collection-grid"></div>
+        </section>
+
+        <section class="content-section" aria-labelledby="featured-title">
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">EDITOR'S PICKS</span>
+              <h2 id="featured-title">编辑精选</h2>
+            </div>
+            <p>值得优先收藏的常用工具</p>
+          </div>
+          <div class="site-grid featured-grid" id="featured-grid"></div>
+        </section>
+
+        <section class="content-section" aria-labelledby="recent-title">
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">FRESHLY UPDATED</span>
+              <h2 id="recent-title">最近更新</h2>
+            </div>
+            <p>近期整理与更新的资源</p>
+          </div>
+          <div class="site-grid" id="recent-grid"></div>
+        </section>
+      </div>
+
+      <section class="content-section results-section" aria-labelledby="results-title">
+        <div class="section-heading results-heading">
+          <div>
+            <span class="section-kicker" id="results-kicker">ALL RESOURCES</span>
+            <h2 id="results-title">全部资源</h2>
+          </div>
+          <p id="results-summary" role="status" aria-live="polite">正在加载资源…</p>
+        </div>
+        <div class="site-grid" id="results-grid"></div>
+        <div class="empty-state" id="empty-state" hidden>
+          <div aria-hidden="true">⌕</div>
+          <h3>没有找到匹配的资源</h3>
+          <p>换个关键词，或清除部分筛选条件试试。</p>
+          <button class="primary-button" id="empty-reset" type="button">查看全部资源</button>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div>
+          <a class="footer-brand" href="./">RoseTools</a>
+          <p>为设计师与开发者整理值得信赖的数字工具。</p>
+        </div>
+        <div class="footer-links">
+          <span>数据更新：<time id="last-updated">—</time></span>
+          <a id="feedback-link" href="#" hidden>提交反馈</a>
+          <span>© <span id="copyright-year"></span> RoseTools</span>
+        </div>
+      </footer>
+    </main>
+
+    <dialog class="site-detail-dialog" id="site-detail-dialog" aria-labelledby="detail-title">
+      <button class="detail-backdrop" id="detail-backdrop" type="button" tabindex="-1" aria-label="关闭工具详情"></button>
+      <section class="detail-sheet" id="detail-sheet">
+        <div class="detail-toolbar">
+          <span>工具详情</span>
+          <button class="icon-button detail-close" id="detail-close" type="button" aria-label="关闭工具详情">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" /></svg>
+          </button>
+        </div>
+        <div class="detail-content" id="detail-content"></div>
+      </section>
+    </dialog>
+
+    <button class="back-to-top icon-button" id="back-to-top" type="button" aria-label="返回顶部" hidden>
+      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 15 6-6 6 6" /></svg>
+    </button>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+    <noscript>
+      <div class="noscript">RoseTools 需要启用 JavaScript 才能显示资源列表。</div>
+    </noscript>
+    <script src="vendor/gsap.min.js" defer></script>
+    <script src="vendor/ScrollTrigger.min.js" defer></script>
+    <script src="site-config.js" defer></script>
+    <script src="sites-data.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="animations.js" defer></script>
+  </body>
+</html>

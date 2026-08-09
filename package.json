@@ -1,0 +1,20 @@
+{
+  "name": "rosetools",
+  "version": "2.7.0",
+  "private": true,
+  "description": "为设计师与开发者精选的静态资源导航站",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "dev": "npm run build && node scripts/dev-server.js",
+    "import-bookmarks": "node scripts/import-bookmarks.js",
+    "sync": "node scripts/build.js",
+    "validate": "node scripts/build.js --check",
+    "check-links": "node scripts/check-links.js",
+    "release-check": "node scripts/build.js && node scripts/release-check.js",
+    "pretest": "npm run build",
+    "test": "node --test tests/*.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
