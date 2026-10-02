@@ -2941,7 +2941,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-10-02"
+      "updatedAt": "2026-10-02",
+      "icon": "icons/100font.webp"
     },
     {
       "name": "Wallhaven",
@@ -2964,7 +2965,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-10-02"
+      "updatedAt": "2026-10-02",
+      "icon": "icons/wallhaven.webp"
     },
     {
       "name": "工具哇",
@@ -2989,7 +2991,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-10-02"
+      "updatedAt": "2026-10-02",
+      "icon": "icons/toolwa.webp"
     },
     {
       "name": "小羿",
@@ -3011,7 +3014,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-10-02"
+      "updatedAt": "2026-10-02",
+      "icon": "icons/xiaoyi.webp"
     },
     {
       "name": "Landing Love",
@@ -3034,7 +3038,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-10-02"
+      "updatedAt": "2026-10-02",
+      "icon": "icons/landing-love.webp"
     },
     {
       "name": "Lapa Ninja",
@@ -3056,7 +3061,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-10-02"
+      "updatedAt": "2026-10-02",
+      "icon": "icons/lapa-ninja.webp"
     },
     {
       "name": "edclub",
@@ -3078,7 +3084,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-10-02"
+      "updatedAt": "2026-10-02",
+      "icon": "icons/edclub.webp"
     },
     {
       "name": "指尖上",
@@ -3100,7 +3107,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-10-02"
+      "updatedAt": "2026-10-02",
+      "icon": "icons/zhijianshang.webp"
     },
     {
       "name": "GPT-Image2 Prompt Gallery",
@@ -3122,7 +3130,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-10-02"
+      "updatedAt": "2026-10-02",
+      "icon": "icons/gpt-image2-prompt-gallery.webp"
     },
     {
       "name": "禾维 AI",
@@ -3145,7 +3154,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-10-02"
+      "updatedAt": "2026-10-02",
+      "icon": "icons/hvoy-ai.svg"
     },
     {
       "name": "Bootstrap模板库",
@@ -3168,7 +3178,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-10-02"
+      "updatedAt": "2026-10-02",
+      "icon": "icons/bootstrapmb.webp"
     },
     {
       "name": "火星编程导航",
@@ -3213,7 +3224,8 @@
         "web"
       ],
       "featured": false,
-      "updatedAt": "2026-10-02"
+      "updatedAt": "2026-10-02",
+      "icon": "icons/jiejoe.webp"
     },
     {
       "name": "88API",
@@ -3236,7 +3248,8 @@
       ],
       "featured": false,
       "updatedAt": "2026-10-02",
-      "verifiedAt": "2026-10-02"
+      "verifiedAt": "2026-10-02",
+      "icon": "icons/88api.webp"
     },
     {
       "name": "Evol",
@@ -3259,7 +3272,8 @@
       ],
       "featured": false,
       "updatedAt": "2026-10-02",
-      "verifiedAt": "2026-10-02"
+      "verifiedAt": "2026-10-02",
+      "icon": "icons/evol.webp"
     }
   ],
   "meta": {
