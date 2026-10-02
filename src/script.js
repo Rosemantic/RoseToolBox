@@ -18,40 +18,60 @@ const PLATFORM_LABELS = {
   mobile: "移动端",
 };
 
-const CATEGORY_ICONS = ["✦", "⌘", "◇", "▦", "✓", "♪", "↗"];
+const Discovery = window.RoseToolsDiscovery;
 const RESULT_PAGE_SIZE = 24;
 const COLLECTIONS = [
   {
     id: "ai-starter",
-    kicker: "AI STARTER",
-    title: "免费 AI 工具",
-    description: "从对话、编程到设计，优先发现可免费开始使用的 AI 工具。",
+    kicker: "EXPLORE AI",
+    title: "AI 探索",
     accent: "violet",
-    matches: (site) => site.category === "AI 工具" && site.pricing !== "paid",
-  },
-  {
-    id: "developer-stack",
-    kicker: "SHIP FASTER",
-    title: "独立开发工具箱",
-    description: "覆盖代码托管、开发环境、前端组件、文档与上线流程。",
-    accent: "blue",
-    matches: (site) => site.category === "开发编程" || site.tags.includes("开发"),
+    description: "从对话与创作到写作和自动化，发现 AI 的不同用法。",
+    matches: (site) => site.tags.includes("AI") || site.tags.includes("Prompt"),
   },
   {
     id: "designer-stack",
-    kicker: "DESIGN STACK",
-    title: "设计师常用工具",
-    description: "从界面设计、配色到图标与素材，组合一套顺手的创作流程。",
+    kicker: "CREATE & EXPLORE",
+    title: "创作与灵感",
     accent: "pink",
-    matches: (site) => ["设计创作", "素材资源"].includes(site.category),
+    description: "看看优秀作品，再用配色、原型和在线创作把想法落地。",
+    matches: (site) => ["设计创作", "灵感参考"].includes(site.category),
+  },
+  {
+    id: "developer-stack",
+    kicker: "BUILD SOMETHING",
+    title: "开发工作台",
+    accent: "blue",
+    description: "把代码、组件、AI 编程助手和在线服务放在一起。",
+    matches: (site) => site.category === "开发编程"
+      || ["代码生成", "API", "CDN"].some((tag) => site.tags.includes(tag)),
+  },
+  {
+    id: "assets-library",
+    kicker: "FIND YOUR MATERIAL",
+    title: "素材与模板",
+    accent: "cyan",
+    description: "为下一次创作准备图片、字体、模板、模型和动画素材。",
+    matches: (site) => site.category === "素材资源"
+      || ["模板", "模型资源", "动画素材"].some((tag) => site.tags.includes(tag)),
   },
   {
     id: "productivity-workflow",
-    kicker: "PRODUCTIVITY",
-    title: "效率工作流",
-    description: "整理日常任务、文件与信息，减少重复操作和工具切换。",
-    accent: "cyan",
-    matches: (site) => site.category === "效率工具",
+    kicker: "LEARN & EXPRESS",
+    title: "学习与表达",
+    accent: "violet",
+    description: "阅读文献和教程，整理知识，再用合适的语言表达出来。",
+    matches: (site) => site.category === "学习与知识"
+      || site.subcategory === "开发文档"
+      || ["学习", "知识管理", "Markdown"].some((tag) => site.tags.includes(tag)),
+  },
+  {
+    id: "relax-break",
+    kicker: "TAKE A BREAK",
+    title: "放松片刻",
+    accent: "pink",
+    description: "看视频、听歌，或者为桌面换一张喜欢的风景。",
+    matches: (site) => site.category === "影音娱乐" || site.tags.includes("桌面壁纸"),
   },
 ];
 
@@ -152,9 +172,9 @@ function renderCategoryNavigation() {
     createNavButton("favorites", "我的收藏", favoriteIds.size, "♥", true),
   );
 
-  data.categories.forEach((category, index) => {
+  data.categories.forEach((category) => {
     const count = data.sites.filter((site) => site.category === category.name).length;
-    nav.append(createNavButton(category.name, category.name, count, CATEGORY_ICONS[index] || "•"));
+    nav.append(createNavButton(category.name, category.name, count, category.icon));
   });
 }
 
@@ -192,29 +212,35 @@ function renderCategoryFilter() {
   });
 }
 
+function createTagButton(tag, count) {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "tag-button";
+  button.dataset.tag = tag;
+  button.setAttribute("aria-pressed", "false");
+  const label = document.createElement("span");
+  label.textContent = tag;
+  const total = document.createElement("span");
+  total.className = "tag-count";
+  total.textContent = String(count);
+  button.append(label, total);
+  return button;
+}
+
 function renderPopularTags() {
-  const counts = new Map();
-  data.sites.forEach((site) => {
-    site.tags.forEach((tag) => counts.set(tag, (counts.get(tag) || 0) + 1));
-  });
+  const tags = Discovery.tagCounts(data.sites);
+  $("#tag-total").textContent = `（${tags.length}）`;
+  $("#popular-tags-list").replaceChildren(...tags.slice(0, 8).map(([tag, count]) => createTagButton(tag, count)));
+  $("#all-tags-list").replaceChildren(...tags.map(([tag, count]) => createTagButton(tag, count)));
+}
 
-  const broadCategories = new Set(data.categories.map((category) => category.name));
-  const tags = [...counts.entries()]
-    .filter(([tag]) => !broadCategories.has(tag))
-    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "zh-CN"))
-    .slice(0, 8);
-
-  const list = $("#popular-tags-list");
-  list.replaceChildren();
-  tags.forEach(([tag, count]) => {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "tag-button";
-    button.dataset.tag = tag;
-    button.setAttribute("aria-pressed", "false");
-    button.textContent = `${tag} ${count}`;
-    list.append(button);
-  });
+function selectTag(tag, reset = false) {
+  const next = !reset && state.tag === tag ? "" : tag;
+  if (reset) Object.assign(state, { q: "", category: "all", pricing: "all", platform: "all" });
+  state.tag = next;
+  state.view = "all";
+  state.collection = "";
+  commitState();
 }
 
 function renderCollections() {
@@ -243,7 +269,7 @@ function renderCollections() {
     const footer = document.createElement("span");
     footer.className = "collection-footer";
     const countLabel = document.createElement("span");
-    countLabel.textContent = `${count} 个工具`;
+    countLabel.textContent = `${count} 个资源`;
     const arrow = document.createElement("span");
     arrow.setAttribute("aria-hidden", "true");
     arrow.textContent = "↗";
@@ -258,8 +284,7 @@ function renderCollections() {
 
 function setupEventListeners() {
   $("#search-input").addEventListener("input", (event) => {
-    state.q = event.target.value.trim();
-    state.tag = "";
+    state.q = Discovery.normalizeQuery(event.target.value);
     state.view = "all";
     state.collection = "";
     commitState();
@@ -299,14 +324,12 @@ function setupEventListeners() {
     $("#results-title").scrollIntoView({ behavior: prefersReducedMotion() ? "auto" : "smooth" });
   });
 
-  $("#popular-tags-list").addEventListener("click", (event) => {
-    const button = event.target.closest(".tag-button");
-    if (!button) return;
-    state.tag = state.tag === button.dataset.tag ? "" : button.dataset.tag;
-    state.view = "all";
-    state.collection = "";
-    commitState();
-  });
+  for (const selector of ["#popular-tags-list", "#all-tags-list"]) {
+    $(selector).addEventListener("click", (event) => {
+      const button = event.target.closest(".tag-button");
+      if (button) selectTag(button.dataset.tag);
+    });
+  }
 
   $("#collection-grid").addEventListener("click", (event) => {
     const button = event.target.closest(".collection-card");
@@ -345,6 +368,12 @@ function setupEventListeners() {
     closeSiteDetail();
   });
   $("#detail-content").addEventListener("click", (event) => {
+    const tagButton = event.target.closest("[data-detail-tag]");
+    if (tagButton) {
+      selectTag(tagButton.dataset.detailTag, true);
+      closeSiteDetail({ focusTarget: $("#results-title") });
+      return;
+    }
     const relatedButton = event.target.closest("[data-related-site-id]");
     if (!relatedButton) return;
     const site = data.sites.find((item) => item.id === relatedButton.dataset.relatedSiteId);
@@ -415,33 +444,8 @@ function loadMoreResults() {
 }
 
 function getFilteredSites() {
-  const normalizedQuery = normalizeText(state.q);
   const collection = COLLECTIONS.find((item) => item.id === state.collection);
-  return data.sites.filter((site) => {
-    if (collection && !collection.matches(site)) return false;
-    if (state.view === "favorites" && !favoriteIds.has(site.id)) return false;
-    if (state.category !== "all" && site.category !== state.category) return false;
-    if (state.pricing !== "all" && site.pricing !== state.pricing) return false;
-    if (state.platform !== "all" && !site.platforms.includes(state.platform)) return false;
-    if (state.tag && !site.tags.includes(state.tag)) return false;
-    if (normalizedQuery && !searchableText(site).includes(normalizedQuery)) return false;
-    return true;
-  });
-}
-
-function searchableText(site) {
-  return normalizeText([
-    site.name,
-    site.description,
-    site.category,
-    site.subcategory,
-    ...site.tags,
-    ...site.aliases,
-  ].join(" "));
-}
-
-function normalizeText(value) {
-  return String(value || "").normalize("NFKC").toLocaleLowerCase("zh-CN");
+  return Discovery.filterSites(data.sites, state, favoriteIds, collection?.matches);
 }
 
 function renderSiteGrid(container, sites, highlightTerm = "") {
@@ -459,7 +463,7 @@ function createSiteCard(site, highlightTerm) {
   const link = document.createElement("a");
   link.href = `tools/${encodeURIComponent(site.slug)}/`;
   link.className = "site-card-link";
-  link.setAttribute("aria-label", `查看 ${site.name} 的工具详情`);
+  link.setAttribute("aria-label", `查看 ${site.name} 的网站详情`);
   link.addEventListener("click", (event) => {
     if (event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
@@ -601,7 +605,7 @@ function openSiteDetail(site, trigger, { updateUrl = false } = {}) {
 }
 
 function closeSiteDetail(options = {}) {
-  const { updateUrl = true } = options instanceof Event ? {} : options;
+  const { updateUrl = true, focusTarget = null } = options instanceof Event ? {} : options;
   const dialog = $("#site-detail-dialog");
   if (!dialog.open || detailClosing) return;
   detailClosing = true;
@@ -613,7 +617,11 @@ function closeSiteDetail(options = {}) {
     detailClosing = false;
     if (updateUrl) setDetailUrl("");
     updateResultsCopy(getFilteredSites().length);
-    if (detailTrigger instanceof HTMLElement && document.contains(detailTrigger)) detailTrigger.focus();
+    const target = focusTarget || detailTrigger;
+    if (target instanceof HTMLElement && document.contains(target)) {
+      target.focus({ preventScroll: true });
+      if (focusTarget) target.scrollIntoView({ behavior: prefersReducedMotion() ? "auto" : "smooth", block: "start" });
+    }
     detailTrigger = null;
   };
 
@@ -666,9 +674,9 @@ function renderSiteDetail(site) {
   appendDetailMeta(meta, "内容更新", formatDate(site.updatedAt));
   appendDetailMeta(meta, "链接核验", site.verifiedAt ? formatDate(site.verifiedAt) : "待核验");
 
-  const tagsSection = createDetailListSection("相关标签", site.tags);
+  const tagsSection = createDetailListSection("相关标签", site.tags, true);
   const aliasesSection = site.aliases.length
-    ? createDetailListSection("也可以这样搜索", site.aliases)
+    ? createDetailListSection("别名", site.aliases)
     : null;
   const relatedSection = createRelatedSitesSection(site);
 
@@ -722,7 +730,7 @@ function createSiteFeedbackUrl(site) {
       url.searchParams.set("title", `[资源反馈] ${site.name}`);
       url.searchParams.set(
         "body",
-        `工具：${site.name}\n站内标识：${site.slug}\n原网址：${site.url}\n\n问题描述：`,
+        `网站：${site.name}\n站内标识：${site.slug}\n原网址：${site.url}\n\n问题描述：`,
       );
     }
     return url.href;
@@ -741,7 +749,7 @@ function appendDetailMeta(list, label, value) {
   list.append(item);
 }
 
-function createDetailListSection(titleText, items) {
+function createDetailListSection(titleText, items, clickable = false) {
   const section = document.createElement("section");
   section.className = "detail-section";
   const title = document.createElement("h3");
@@ -749,7 +757,13 @@ function createDetailListSection(titleText, items) {
   const list = document.createElement("div");
   list.className = "detail-tags";
   items.forEach((item) => {
-    const tag = document.createElement("span");
+    const tag = document.createElement(clickable ? "button" : "span");
+    if (clickable) {
+      tag.type = "button";
+      tag.className = "tag-button";
+      tag.dataset.detailTag = item;
+      tag.setAttribute("aria-label", `按标签“${item}”浏览资源`);
+    }
     tag.textContent = item;
     list.append(tag);
   });
@@ -758,21 +772,14 @@ function createDetailListSection(titleText, items) {
 }
 
 function createRelatedSitesSection(site) {
-  const candidates = data.sites
-    .filter((item) => item.id !== site.id && item.subcategory === site.subcategory)
-    .concat(data.sites.filter((item) => item.id !== site.id && item.category === site.category));
-  const seen = new Set();
-  const related = candidates.filter((item) => {
-    if (seen.has(item.id)) return false;
-    seen.add(item.id);
-    return true;
-  }).slice(0, 3);
+  const related = Discovery.relatedSites(site, data.sites);
+
   if (!related.length) return null;
 
   const section = document.createElement("section");
   section.className = "detail-section";
   const title = document.createElement("h3");
-  title.textContent = "同类工具";
+  title.textContent = "相关推荐";
   const list = document.createElement("div");
   list.className = "related-sites";
   related.forEach((item) => {
@@ -797,28 +804,39 @@ function createRelatedSitesSection(site) {
 
 function appendHighlightedText(element, text, term) {
   const source = String(text || "");
-  const query = String(term || "").trim();
-  if (!query) {
-    element.textContent = source;
-    return;
+  const tokens = Discovery.queryTokens(term);
+  if (!tokens.length) { element.textContent = source; return; }
+  let normalized = "";
+  const ranges = [];
+  let offset = 0;
+  for (const char of source) {
+    const value = char.normalize("NFKC").toLocaleLowerCase("zh-CN");
+    for (let i = 0; i < value.length; i++) ranges.push([offset, offset + char.length]);
+    normalized += value;
+    offset += char.length;
   }
-
-  const normalizedSource = normalizeText(source);
-  const normalizedQuery = normalizeText(query);
+  const hits = [];
+  for (const token of tokens) {
+    let index = normalized.indexOf(token);
+    while (index >= 0) {
+      hits.push([ranges[index][0], ranges[index + token.length - 1][1]]);
+      index = normalized.indexOf(token, index + token.length);
+    }
+  }
+  hits.sort((a, b) => a[0] - b[0]);
+  const merged = [];
+  for (const hit of hits) {
+    const last = merged.at(-1);
+    if (last && hit[0] <= last[1]) last[1] = Math.max(last[1], hit[1]);
+    else merged.push(hit);
+  }
   let cursor = 0;
-  let index = normalizedSource.indexOf(normalizedQuery);
-  if (index < 0) {
-    element.textContent = source;
-    return;
-  }
-
-  while (index >= 0) {
-    if (index > cursor) element.append(document.createTextNode(source.slice(cursor, index)));
+  for (const [start, end] of merged) {
+    if (start > cursor) element.append(document.createTextNode(source.slice(cursor, start)));
     const mark = document.createElement("mark");
-    mark.textContent = source.slice(index, index + query.length);
+    mark.textContent = source.slice(start, end);
     element.append(mark);
-    cursor = index + query.length;
-    index = normalizedSource.indexOf(normalizedQuery, cursor);
+    cursor = end;
   }
   if (cursor < source.length) element.append(document.createTextNode(source.slice(cursor)));
 }
@@ -847,6 +865,12 @@ function updateResultsCopy(count, shown = Math.min(count, visibleResultCount)) {
     path = `首页 / ${state.category}`;
   }
 
+  const filters = [];
+  if (state.category !== "all" && label !== state.category) filters.push(state.category);
+  if (state.tag && label !== `标签：${state.tag}`) filters.push(`标签：${state.tag}`);
+  if (state.pricing !== "all") filters.push(PRICING_LABELS[state.pricing]);
+  if (state.platform !== "all") filters.push(PLATFORM_LABELS[state.platform]);
+  if (filters.length) path += ` / ${filters.join(" / ")}`;
   title.textContent = label;
   kicker.textContent = activeCollection
     ? activeCollection.kicker
@@ -856,12 +880,14 @@ function updateResultsCopy(count, shown = Math.min(count, visibleResultCount)) {
     ? `显示 ${shown} / 共 ${count} 个资源`
     : `找到 ${count} 个资源`;
   document.title = label === "全部资源"
-    ? "RoseTools｜设计师与开发者的精选工具导航"
+    ? "RoseTools｜收藏值得再次打开的网站"
     : `${label}｜RoseTools`;
 }
 
 function syncControls() {
-  $("#search-input").value = state.q;
+  const searchInput = $("#search-input");
+  // Preserve trailing spaces and the caret while a multi-token query is being typed.
+  if (Discovery.normalizeQuery(searchInput.value) !== state.q) searchInput.value = state.q;
   $("#category-filter").value = state.category;
   $("#pricing-filter").value = state.pricing;
   $("#platform-filter").value = state.platform;
@@ -891,7 +917,7 @@ function commitState() {
 
 function readStateFromUrl() {
   const params = new URLSearchParams(location.search);
-  state.q = params.get("q") || "";
+  state.q = Discovery.normalizeQuery(params.get("q"));
   state.category = params.get("category") || "all";
   state.pricing = params.get("pricing") || "all";
   state.platform = params.get("platform") || "all";

@@ -1,0 +1,607 @@
+[
+  {
+    "id": "site-001",
+    "slug": "chatgpt",
+    "url": "https://chat.openai.com/"
+  },
+  {
+    "id": "site-002",
+    "slug": "claude",
+    "url": "https://claude.ai/"
+  },
+  {
+    "id": "site-003",
+    "slug": "gemini",
+    "url": "https://gemini.google.com/"
+  },
+  {
+    "id": "site-004",
+    "slug": "deepseek",
+    "url": "https://www.deepseek.com/"
+  },
+  {
+    "id": "site-005",
+    "slug": "doubao-com",
+    "url": "https://www.doubao.com/"
+  },
+  {
+    "id": "site-006",
+    "slug": "kimi",
+    "url": "https://kimi.moonshot.cn/"
+  },
+  {
+    "id": "site-007",
+    "slug": "cursor",
+    "url": "https://cursor.com/cn"
+  },
+  {
+    "id": "site-008",
+    "slug": "windsurf",
+    "url": "https://windsurf.com/"
+  },
+  {
+    "id": "site-009",
+    "slug": "qoder",
+    "url": "https://qoder.com/"
+  },
+  {
+    "id": "site-010",
+    "slug": "trae",
+    "url": "https://trae.ai/"
+  },
+  {
+    "id": "site-011",
+    "slug": "liblib",
+    "url": "https://www.liblib.art/"
+  },
+  {
+    "id": "site-012",
+    "slug": "ai",
+    "url": "https://jimeng.jianying.com/"
+  },
+  {
+    "id": "site-013",
+    "slug": "midjourney",
+    "url": "https://www.midjourney.com/"
+  },
+  {
+    "id": "site-014",
+    "slug": "huemint",
+    "url": "https://huemint.com/"
+  },
+  {
+    "id": "site-015",
+    "slug": "github",
+    "url": "https://github.com/"
+  },
+  {
+    "id": "site-016",
+    "slug": "vs-code",
+    "url": "https://code.visualstudio.com/"
+  },
+  {
+    "id": "site-017",
+    "slug": "reactbits",
+    "url": "https://www.reactbits.dev/"
+  },
+  {
+    "id": "site-018",
+    "slug": "vue-bits",
+    "url": "https://vue-bits.dev/"
+  },
+  {
+    "id": "site-019",
+    "slug": "gsap",
+    "url": "https://gsap.com/"
+  },
+  {
+    "id": "site-020",
+    "slug": "framer-motion",
+    "url": "https://www.framer.com/motion/"
+  },
+  {
+    "id": "site-021",
+    "slug": "inspira-ui",
+    "url": "https://v1.inspira-ui.com/"
+  },
+  {
+    "id": "site-022",
+    "slug": "fancy-components",
+    "url": "https://www.fancycomponents.dev/"
+  },
+  {
+    "id": "site-023",
+    "slug": "uiverse",
+    "url": "https://uiverse.io/"
+  },
+  {
+    "id": "site-024",
+    "slug": "navnav",
+    "url": "https://navnav.co/"
+  },
+  {
+    "id": "site-025",
+    "slug": "lenis",
+    "url": "https://lenis.darkroom.engineering/"
+  },
+  {
+    "id": "site-026",
+    "slug": "lottiefiles",
+    "url": "https://lottiefiles.com/"
+  },
+  {
+    "id": "site-027",
+    "slug": "svg",
+    "url": "https://tools.ui-layouts.com/"
+  },
+  {
+    "id": "site-028",
+    "slug": "mdn",
+    "url": "https://developer.mozilla.org/zh-CN/"
+  },
+  {
+    "id": "site-029",
+    "slug": "bootcdn",
+    "url": "https://www.bootcdn.cn/"
+  },
+  {
+    "id": "site-030",
+    "slug": "cursor-directory",
+    "url": "https://cursor.directory/"
+  },
+  {
+    "id": "site-031",
+    "slug": "cursor-rules-cn",
+    "url": "https://cursorrulescn.cn/"
+  },
+  {
+    "id": "site-032",
+    "slug": "codepen",
+    "url": "https://codepen.io/"
+  },
+  {
+    "id": "site-033",
+    "slug": "figma",
+    "url": "https://www.figma.com/"
+  },
+  {
+    "id": "site-034",
+    "slug": "framer",
+    "url": "https://www.framer.com/"
+  },
+  {
+    "id": "site-035",
+    "slug": "webflow",
+    "url": "https://webflow.com/"
+  },
+  {
+    "id": "site-036",
+    "slug": "canva",
+    "url": "https://www.canva.com/"
+  },
+  {
+    "id": "site-037",
+    "slug": "gaoding-com",
+    "url": "https://www.gaoding.com/"
+  },
+  {
+    "id": "site-038",
+    "slug": "remove-bg",
+    "url": "https://www.remove.bg/zh"
+  },
+  {
+    "id": "site-039",
+    "slug": "picwish-cn",
+    "url": "https://picwish.cn/"
+  },
+  {
+    "id": "site-040",
+    "slug": "d-design",
+    "url": "https://d.design/toolbox/cutout"
+  },
+  {
+    "id": "site-041",
+    "slug": "happyhues",
+    "url": "https://www.happyhues.co/"
+  },
+  {
+    "id": "site-042",
+    "slug": "fontawesome",
+    "url": "https://fontawesome.com.cn/"
+  },
+  {
+    "id": "site-043",
+    "slug": "lordicon",
+    "url": "https://lordicon.com/"
+  },
+  {
+    "id": "site-044",
+    "slug": "iconfinder",
+    "url": "https://www.iconfinder.com/"
+  },
+  {
+    "id": "site-045",
+    "slug": "iconfont-cn",
+    "url": "https://www.iconfont.cn/"
+  },
+  {
+    "id": "site-046",
+    "slug": "qiuziti-com",
+    "url": "https://www.qiuziti.com/"
+  },
+  {
+    "id": "site-047",
+    "slug": "font-sucai999-com",
+    "url": "https://font.sucai999.com/"
+  },
+  {
+    "id": "site-048",
+    "slug": "maoken-com",
+    "url": "https://www.maoken.com/"
+  },
+  {
+    "id": "site-049",
+    "slug": "unsplash",
+    "url": "https://unsplash.com/"
+  },
+  {
+    "id": "site-050",
+    "slug": "pexels",
+    "url": "https://www.pexels.com/zh-cn/"
+  },
+  {
+    "id": "site-051",
+    "slug": "pixabay",
+    "url": "https://pixabay.com/"
+  },
+  {
+    "id": "site-052",
+    "slug": "netbian-com",
+    "url": "http://www.netbian.com/"
+  },
+  {
+    "id": "site-053",
+    "slug": "nuantang-net",
+    "url": "https://www.nuantang.net/"
+  },
+  {
+    "id": "site-054",
+    "slug": "haowallpaper-com",
+    "url": "https://haowallpaper.com/"
+  },
+  {
+    "id": "site-055",
+    "slug": "58pic-com",
+    "url": "https://www.58pic.com/"
+  },
+  {
+    "id": "site-056",
+    "slug": "51miz-com",
+    "url": "https://www.51miz.com/"
+  },
+  {
+    "id": "site-057",
+    "slug": "ibaotu-com",
+    "url": "https://ibaotu.com/"
+  },
+  {
+    "id": "site-058",
+    "slug": "sc-chinaz-com",
+    "url": "https://sc.chinaz.com/"
+  },
+  {
+    "id": "site-059",
+    "slug": "design006-com",
+    "url": "https://www.design006.com/"
+  },
+  {
+    "id": "site-060",
+    "slug": "logosc-cn",
+    "url": "https://www.logosc.cn/"
+  },
+  {
+    "id": "site-061",
+    "slug": "uugai-com",
+    "url": "https://www.uugai.com/"
+  },
+  {
+    "id": "site-062",
+    "slug": "notion",
+    "url": "https://www.notion.so/"
+  },
+  {
+    "id": "site-063",
+    "slug": "cli-im",
+    "url": "https://cli.im/"
+  },
+  {
+    "id": "site-064",
+    "slug": "hotkey-cheatsheet",
+    "url": "https://hotkeycheatsheet.com/"
+  },
+  {
+    "id": "site-065",
+    "slug": "text-to-speech",
+    "url": "https://www.text-to-speech.cn/"
+  },
+  {
+    "id": "site-066",
+    "slug": "xmind",
+    "url": "https://xmind.cn/"
+  },
+  {
+    "id": "site-067",
+    "slug": "typora",
+    "url": "https://typoraio.cn/"
+  },
+  {
+    "id": "site-068",
+    "slug": "snipaste",
+    "url": "https://zh.snipaste.com/"
+  },
+  {
+    "id": "site-069",
+    "slug": "mocreak",
+    "url": "https://www.mocreak.com/"
+  },
+  {
+    "id": "site-070",
+    "slug": "vowa",
+    "url": "https://vowa.lat/"
+  },
+  {
+    "id": "site-071",
+    "slug": "lestvpn",
+    "url": "https://letsvpn.world/"
+  },
+  {
+    "id": "site-072",
+    "slug": "siteinspire",
+    "url": "https://www.siteinspire.com/"
+  },
+  {
+    "id": "site-073",
+    "slug": "awwwards",
+    "url": "https://www.awwwards.com/"
+  },
+  {
+    "id": "site-074",
+    "slug": "dribbble",
+    "url": "https://dribbble.com/"
+  },
+  {
+    "id": "site-075",
+    "slug": "zcool-com-cn",
+    "url": "https://www.zcool.com.cn/"
+  },
+  {
+    "id": "site-076",
+    "slug": "cnki-net",
+    "url": "https://www.cnki.net/"
+  },
+  {
+    "id": "site-077",
+    "slug": "grammarly",
+    "url": "https://www.grammarly.com/"
+  },
+  {
+    "id": "site-078",
+    "slug": "deepl",
+    "url": "https://www.deepl.com/"
+  },
+  {
+    "id": "site-079",
+    "slug": "quillbot",
+    "url": "https://quillbot.com/"
+  },
+  {
+    "id": "site-080",
+    "slug": "aibiye",
+    "url": "https://www.aibiye.com/"
+  },
+  {
+    "id": "site-081",
+    "slug": "ai-2",
+    "url": "https://ai-bot.cn/"
+  },
+  {
+    "id": "site-082",
+    "slug": "haitangw",
+    "url": "https://www.haitangw.cc/"
+  },
+  {
+    "id": "site-083",
+    "slug": "awesome-lists",
+    "url": "https://github.com/sindresorhus/awesome"
+  },
+  {
+    "id": "site-084",
+    "slug": "qijishow-com",
+    "url": "https://qijishow.com/"
+  },
+  {
+    "id": "site-085",
+    "slug": "ruancang-net",
+    "url": "https://www.ruancang.net/"
+  },
+  {
+    "id": "site-086",
+    "slug": "netflix",
+    "url": "https://www.netflix.com/"
+  },
+  {
+    "id": "site-087",
+    "slug": "youtube",
+    "url": "https://www.youtube.com/"
+  },
+  {
+    "id": "site-088",
+    "slug": "bilibili-com",
+    "url": "https://www.bilibili.com/"
+  },
+  {
+    "id": "site-089",
+    "slug": "v-qq-com",
+    "url": "https://v.qq.com/"
+  },
+  {
+    "id": "site-090",
+    "slug": "iqiyi-com",
+    "url": "https://www.iqiyi.com/"
+  },
+  {
+    "id": "site-091",
+    "slug": "youku-com",
+    "url": "https://www.youku.com/"
+  },
+  {
+    "id": "site-092",
+    "slug": "douyin-com",
+    "url": "https://www.douyin.com/"
+  },
+  {
+    "id": "site-093",
+    "slug": "xiaohongshu-com",
+    "url": "https://www.xiaohongshu.com/"
+  },
+  {
+    "id": "site-094",
+    "slug": "qq",
+    "url": "https://y.qq.com/"
+  },
+  {
+    "id": "site-095",
+    "slug": "music-163-com",
+    "url": "https://music.163.com/"
+  },
+  {
+    "id": "site-096",
+    "slug": "spotify",
+    "url": "https://www.spotify.com/"
+  },
+  {
+    "id": "site-097",
+    "slug": "ai-3",
+    "url": "https://www.miai.pro/list"
+  },
+  {
+    "id": "site-098",
+    "slug": "gamma",
+    "url": "https://gamma.app/"
+  },
+  {
+    "id": "site-099",
+    "slug": "lovart",
+    "url": "https://www.lovart.ai/zh/home"
+  },
+  {
+    "id": "site-100",
+    "slug": "resource",
+    "url": "https://www.jianzhuxuezhang.com/"
+  },
+  {
+    "id": "site-101",
+    "slug": "meshy",
+    "url": "https://www.meshy.ai/zh/?noRedirect=true"
+  },
+  {
+    "id": "site-102",
+    "slug": "motionsites",
+    "url": "https://motionsites.ai/"
+  },
+  {
+    "id": "site-103",
+    "slug": "loading-ui",
+    "url": "https://loading-ui.com/"
+  },
+  {
+    "id": "site-104",
+    "slug": "21st-dev",
+    "url": "https://21st.dev/home"
+  },
+  {
+    "id": "site-105",
+    "slug": "originkit",
+    "url": "https://www.originkit.dev/"
+  },
+  {
+    "id": "site-106",
+    "slug": "stringtune",
+    "url": "https://string-tune.fiddle.digital/"
+  },
+  {
+    "id": "site-107",
+    "slug": "stitch",
+    "url": "https://stitch.withgoogle.com/"
+  },
+  {
+    "id": "site-108",
+    "slug": "resource-2",
+    "url": "https://588ku.com/"
+  },
+  {
+    "id": "site-109",
+    "slug": "resource-3",
+    "url": "https://huaban.com/discovery"
+  },
+  {
+    "id": "site-110",
+    "slug": "resource-4",
+    "url": "https://chaopx.com/"
+  },
+  {
+    "id": "site-111",
+    "slug": "resource-5",
+    "url": "https://dameigong.cn/"
+  },
+  {
+    "id": "site-112",
+    "slug": "aishort",
+    "url": "https://www.aishort.top/?tags=ai"
+  },
+  {
+    "id": "site-113",
+    "slug": "resource-6",
+    "url": "http://qiukuai.top/"
+  },
+  {
+    "id": "site-114",
+    "slug": "resource-7",
+    "url": "https://love.mmy234.com/"
+  },
+  {
+    "id": "site-115",
+    "slug": "packyapi",
+    "url": "https://www.packyapi.com/"
+  },
+  {
+    "id": "site-116",
+    "slug": "resource-8",
+    "url": "https://minimal.gallery/"
+  },
+  {
+    "id": "site-117",
+    "slug": "logo-system",
+    "url": "https://logosystem.co/"
+  },
+  {
+    "id": "site-118",
+    "slug": "webzibition",
+    "url": "https://tympanus.net/codrops/webzibition/"
+  },
+  {
+    "id": "site-119",
+    "slug": "godly",
+    "url": "https://godly.website/"
+  },
+  {
+    "id": "site-120",
+    "slug": "site-of-sites",
+    "url": "https://www.siteofsites.co/"
+  },
+  {
+    "id": "site-121",
+    "slug": "recent-design",
+    "url": "https://recent.design/"
+  }
+]

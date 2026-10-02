@@ -2,6 +2,7 @@
 
 const fs = require("node:fs");
 const path = require("node:path");
+const { canonicalUrl, normalizeText, relatedSites } = require("../src/discovery.js");
 
 const ROOT = path.resolve(__dirname, "..");
 const SOURCE_ROOT = path.join(ROOT, "src");
@@ -31,7 +32,11 @@ const CATEGORY_SLUGS = new Map([
   ["素材资源", "assets"],
   ["效率工具", "productivity"],
   ["影音娱乐", "media"],
-  ["灵感与学习", "inspiration"],
+  ["灵感参考", "inspiration"],
+  ["软件资源", "software"],
+  ["网络与服务", "network-services"],
+  ["学习与知识", "knowledge"],
+  ["导航发现", "discovery"],
 ]);
 
 function prepareDist() {
@@ -44,7 +49,7 @@ function prepareDist() {
   fs.mkdirSync(path.join(DIST_ROOT, "vendor"), { recursive: true });
   fs.writeFileSync(path.join(DIST_ROOT, ".nojekyll"), "", "utf8");
 
-  for (const file of ["index.html", "style.css", "script.js", "animations.js", "manifest.webmanifest"]) {
+  for (const file of ["index.html", "style.css", "script.js", "discovery.js", "animations.js", "manifest.webmanifest"]) {
     fs.copyFileSync(path.join(SOURCE_ROOT, file), path.join(DIST_ROOT, file));
   }
   for (const file of ["Logo.svg", "og-image.png"]) {
@@ -72,6 +77,15 @@ function validate(data) {
       errors.push(`categories[${index}] 缺少 name 或 subcategories`);
       return;
     }
+    if (typeof category.icon !== "string" || !category.icon.trim()
+      || [...category.icon].length > 4 || /[<>&\p{C}]/u.test(category.icon)) {
+      errors.push(`categories[${index}] icon 必须是简单字符图标`);
+    }
+    if (category.subcategories.some((name) => typeof name !== "string" || !name.trim())
+      || new Set(category.subcategories).size !== category.subcategories.length) {
+      errors.push(`categories[${index}] subcategories 必须是非空且不重复的名称`);
+    }
+
     if (categoryMap.has(category.name)) errors.push(`分类重复：${category.name}`);
     categoryMap.set(category.name, new Set(category.subcategories));
   });
@@ -90,14 +104,15 @@ function validate(data) {
 
     if (ids.has(site.id)) errors.push(`${location} id 重复：${site.id}`);
     if (slugs.has(site.slug)) errors.push(`${location} slug 重复：${site.slug}`);
-    if (urls.has(site.url)) errors.push(`${location} URL 重复：${site.url}`);
     ids.add(site.id);
     slugs.add(site.slug);
-    urls.add(site.url);
 
     try {
       const url = new URL(site.url);
       if (!["http:", "https:"].includes(url.protocol)) throw new Error("仅支持 HTTP(S)");
+      const canonical = canonicalUrl(site.url);
+      if (urls.has(canonical)) errors.push(`${location} 规范 URL 重复：${site.url}`);
+      urls.add(canonical);
     } catch (error) {
       errors.push(`${location} URL 无效：${site.url}`);
     }
@@ -109,6 +124,21 @@ function validate(data) {
     }
     if (!Array.isArray(site.tags) || site.tags.length === 0) errors.push(`${location} tags 必须是非空数组`);
     if (!Array.isArray(site.aliases)) errors.push(`${location} aliases 必须是数组`);
+    for (const field of ["tags", "aliases"]) {
+      if (!Array.isArray(site[field])) continue;
+      const values = site[field];
+      if (values.some((value) => typeof value !== "string" || !value.trim() || value !== value.trim())) {
+        errors.push(`${location} ${field} 必须是非空且无首尾空格的字符串`);
+      }
+      if (new Set(values.map(normalizeText)).size !== values.length) {
+        errors.push(`${location} ${field} 存在重复`);
+      }
+    }
+    const categoryTags = new Set([...categoryMap.keys(), site.subcategory].map(normalizeText));
+    if (Array.isArray(site.tags) && site.tags.some((tag) => categoryTags.has(normalizeText(tag)))) {
+      errors.push(`${location} tags 不能机械复制分类或子分类`);
+    }
+
     if (!VALID_PRICING.has(site.pricing)) errors.push(`${location} pricing 无效：${site.pricing}`);
     if (!Array.isArray(site.platforms) || site.platforms.length === 0) {
       errors.push(`${location} platforms 必须是非空数组`);
@@ -196,7 +226,7 @@ function createFeedbackUrl(baseUrl, site) {
       url.searchParams.set("title", `[资源反馈] ${site.name}`);
       url.searchParams.set(
         "body",
-        `工具：${site.name}\n站内标识：${site.slug}\n原网址：${site.url}\n\n问题描述：`,
+        `网站：${site.name}\n站内标识：${site.slug}\n原网址：${site.url}\n\n问题描述：`,
       );
     }
     return url.href;
@@ -252,7 +282,7 @@ function renderStaticCard(site) {
   const tags = site.tags.slice(0, 2).map((tag) => `<span class="site-tag">${escapeHtml(tag)}</span>`).join("");
   const domain = new URL(site.url).hostname.replace(/^www\./, "");
   return `<article class="site-card">
-    <a class="site-card-link" href="../../tools/${encodeURIComponent(site.slug)}/" aria-label="查看 ${escapeAttribute(site.name)} 的工具详情">
+    <a class="site-card-link" href="../../tools/${encodeURIComponent(site.slug)}/" aria-label="查看 ${escapeAttribute(site.name)} 的网站详情">
       <div class="site-card-header">${renderStaticIcon(site)}<div class="site-heading"><h2>${escapeHtml(site.name)}</h2><span class="site-domain">${escapeHtml(domain)}</span></div></div>
       <p class="site-description">${escapeHtml(site.description)}</p>
       <div class="site-card-footer">${tags}<span class="pricing-badge">${escapeHtml(PRICING_LABELS[site.pricing] || site.pricing)}</span></div>
@@ -266,9 +296,7 @@ function generateToolPage(site, data, runtimeConfig) {
     : "";
   const categoryUrl = `../../category/${categorySlug(site.category)}/`;
   const feedbackUrl = createFeedbackUrl(runtimeConfig.feedbackUrl, site);
-  const related = data.sites
-    .filter((item) => item.id !== site.id && item.subcategory === site.subcategory)
-    .slice(0, 4);
+  const related = relatedSites(site, data.sites);
   const structuredData = {
     "@context": "https://schema.org",
     "@graph": [
@@ -291,15 +319,17 @@ function generateToolPage(site, data, runtimeConfig) {
       },
     ],
   };
-  const tags = site.tags.map((tag) => `<span>${escapeHtml(tag)}</span>`).join("");
+  const tags = site.tags.map((tag) => `<a href="../../?tag=${encodeURIComponent(tag)}" aria-label="按标签“${escapeAttribute(tag)}”浏览资源">${escapeHtml(tag)}</a>`).join("");
+  const aliases = site.aliases.length
+    ? `<section class="detail-section"><h2>别名</h2><div class="detail-tags">${site.aliases.map((alias) => `<span>${escapeHtml(alias)}</span>`).join("")}</div></section>` : "";
   const relatedMarkup = related.length
-    ? `<section class="tool-related" aria-labelledby="related-title"><h2 id="related-title">同类工具</h2><div class="tool-related-grid">${related.map((item) => `<a href="../${encodeURIComponent(item.slug)}/"><strong>${escapeHtml(item.name)}</strong><span>${escapeHtml(item.description)}</span></a>`).join("")}</div></section>`
+    ? `<section class="tool-related" aria-labelledby="related-title"><h2 id="related-title">相关推荐</h2><div class="tool-related-grid">${related.map((item) => `<a href="../${encodeURIComponent(item.slug)}/"><strong>${escapeHtml(item.name)}</strong><span>${escapeHtml(item.description)}</span></a>`).join("")}</div></section>`
     : "";
   const feedbackMarkup = feedbackUrl
     ? `<a class="secondary-button" href="${escapeAttribute(feedbackUrl)}" target="_blank" rel="noopener noreferrer">反馈链接或信息问题</a>`
     : "";
   return `${staticHead({
-    title: `${site.name}｜RoseTools 工具详情`,
+    title: `${site.name}｜RoseTools 网站详情`,
     description: site.description,
     canonical: toolUrl,
     ogImageUrl: runtimeConfig.siteUrl ? runtimeConfig.ogImageUrl : `../../${runtimeConfig.ogImageUrl}`,
@@ -322,11 +352,12 @@ function generateToolPage(site, data, runtimeConfig) {
           <div><dt>链接核验</dt><dd>${site.verifiedAt ? formatStaticDate(site.verifiedAt) : "待核验"}</dd></div>
         </dl>
         <section class="detail-section"><h2>相关标签</h2><div class="detail-tags">${tags}</div></section>
+        ${aliases}
         <div class="tool-page-actions"><a class="primary-button" href="${escapeAttribute(site.url)}" target="_blank" rel="noopener noreferrer">访问官方网站 ↗</a>${feedbackMarkup}</div>
       </article>
       ${relatedMarkup}
     </main>
-    <footer class="static-footer">© ${new Date().getFullYear()} RoseTools · 为设计师与开发者精选实用工具</footer>
+    <footer class="static-footer">© ${new Date().getFullYear()} RoseTools · 收藏值得再次打开的网站</footer>
   </body>
 </html>
 `;
@@ -356,7 +387,7 @@ function generateCategoryPage(category, sites, runtimeConfig, updatedAt) {
     },
   };
   return `${staticHead({
-    title: `${category.name}｜RoseTools 精选工具`,
+    title: `${category.name}｜RoseTools 精选资源`,
     description,
     canonical: categoryUrl,
     ogImageUrl: runtimeConfig.siteUrl ? runtimeConfig.ogImageUrl : `../../${runtimeConfig.ogImageUrl}`,
@@ -370,7 +401,7 @@ function generateCategoryPage(category, sites, runtimeConfig, updatedAt) {
       <header class="category-page-heading"><div><span class="section-kicker">CURATED CATEGORY</span><h1>${escapeHtml(category.name)}</h1><p>${escapeHtml(description)}</p></div><time datetime="${escapeAttribute(updatedAt)}">数据更新：${formatStaticDate(updatedAt)}</time></header>
       <div class="site-grid category-page-grid">${sites.map(renderStaticCard).join("")}</div>
     </main>
-    <footer class="static-footer">© ${new Date().getFullYear()} RoseTools · 为设计师与开发者精选实用工具</footer>
+    <footer class="static-footer">© ${new Date().getFullYear()} RoseTools · 收藏值得再次打开的网站</footer>
   </body>
 </html>
 `;
@@ -503,4 +534,5 @@ function main() {
   }
 }
 
-main();
+if (require.main === module) main();
+module.exports = { validate, categorySlug };

@@ -6,24 +6,24 @@
     <meta name="theme-color" content="#f7f8fc" />
     <meta
       name="description"
-      content="RoseTools 为设计师与开发者精选 AI、开发、设计、效率与灵感资源。"
+      content="收藏值得再次打开的网站，整理 AI、设计、开发、素材、灵感、学习、娱乐与各种有意思的互联网资源。"
     />
     <meta name="robots" content="index, follow" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="zh_CN" />
-    <meta property="og:title" content="RoseTools｜设计师与开发者的精选工具导航" />
+    <meta property="og:title" content="RoseTools｜收藏值得再次打开的网站" />
     <meta
       property="og:description"
-      content="发现经过整理的设计、开发、AI 与效率工具。"
+      content="发现实用、有趣、富有灵感与值得再次打开的网站。"
     />
     <meta id="og-image" property="og:image" content="og-image.png" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="RoseTools 为设计师与开发者精选实用工具" />
+    <meta property="og:image:alt" content="RoseTools 收藏值得再次打开的网站" />
     <meta id="og-url" property="og:url" content="./" />
     <meta name="twitter:card" content="summary" />
-    <title>RoseTools｜设计师与开发者的精选工具导航</title>
+    <title>RoseTools｜收藏值得再次打开的网站</title>
     <link id="canonical-link" rel="canonical" href="./" />
     <link rel="icon" href="Logo.svg" type="image/svg+xml" />
     <link id="manifest-link" rel="manifest" />
@@ -145,9 +145,9 @@
 
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <span class="eyebrow">CURATED FOR CREATORS</span>
-          <h1 id="hero-title"><span>为设计师与开发者</span><br /><span>精选实用工具</span></h1>
-          <p>少一点寻找，多一点创造。收录真正值得打开的设计、开发、AI 与效率资源。</p>
+          <span class="eyebrow">YOUR INTERNET COLLECTION</span>
+          <h1 id="hero-title"><span>收藏值得</span><br /><span>再次打开的网站</span></h1>
+          <p>整理 AI、设计、开发、素材、灵感、学习、娱乐与各种有意思的互联网资源。</p>
         </div>
         <div class="search-panel">
           <label class="search-box" for="search-input">
@@ -159,12 +159,12 @@
               id="search-input"
               type="search"
               autocomplete="off"
-              placeholder="搜索工具、分类或标签…"
+              placeholder="搜索网站、分类或标签…"
               aria-describedby="search-hint"
             />
             <kbd id="search-shortcut">Ctrl K</kbd>
           </label>
-          <p id="search-hint">支持名称、简介、分类、标签和中英文别名</p>
+          <p id="search-hint">支持名称、简介、分类、标签和别名；多个关键词用空格分隔</p>
         </div>
       </section>
 
@@ -172,6 +172,12 @@
         <h2 id="popular-tags-title">热门标签</h2>
         <div id="popular-tags-list" class="tag-list"></div>
       </section>
+
+      <details class="all-tags" id="all-tags-panel">
+        <summary>全部标签 <span id="tag-total"></span></summary>
+        <p>按收录数量排序，可与搜索和筛选条件组合使用。</p>
+        <div class="all-tags-list" id="all-tags-list" aria-label="全部标签筛选"></div>
+      </details>
 
       <section class="discovery-toolbar" aria-label="资源筛选">
         <div class="breadcrumb" id="breadcrumb" aria-live="polite">首页 / 全部资源</div>
@@ -210,7 +216,7 @@
               <span class="section-kicker">CURATED COLLECTIONS</span>
               <h2 id="collections-title">场景合集</h2>
             </div>
-            <p>按真实使用场景快速找到一组好工具</p>
+            <p>按兴趣与日常场景发现一组值得收藏的资源</p>
           </div>
           <div class="collection-grid" id="collection-grid"></div>
         </section>
@@ -221,7 +227,7 @@
               <span class="section-kicker">EDITOR'S PICKS</span>
               <h2 id="featured-title">编辑精选</h2>
             </div>
-            <p>值得优先收藏的常用工具</p>
+            <p>值得优先收藏的网站</p>
           </div>
           <div class="site-grid featured-grid" id="featured-grid"></div>
         </section>
@@ -242,7 +248,7 @@
         <div class="section-heading results-heading">
           <div>
             <span class="section-kicker" id="results-kicker">ALL RESOURCES</span>
-            <h2 id="results-title">全部资源</h2>
+            <h2 id="results-title" tabindex="-1">全部资源</h2>
           </div>
           <p id="results-summary" role="status" aria-live="polite">正在加载资源…</p>
         </div>
@@ -261,7 +267,7 @@
       <footer class="site-footer">
         <div>
           <a class="footer-brand" href="./">RoseTools</a>
-          <p>为设计师与开发者整理值得信赖的数字工具。</p>
+          <p>收藏值得再次打开的网站。</p>
         </div>
         <div class="footer-links">
           <span>数据更新：<time id="last-updated">—</time></span>
@@ -272,11 +278,11 @@
     </main>
 
     <dialog class="site-detail-dialog" id="site-detail-dialog" aria-labelledby="detail-title">
-      <button class="detail-backdrop" id="detail-backdrop" type="button" tabindex="-1" aria-label="关闭工具详情"></button>
+      <button class="detail-backdrop" id="detail-backdrop" type="button" tabindex="-1" aria-label="关闭网站详情"></button>
       <section class="detail-sheet" id="detail-sheet">
         <div class="detail-toolbar">
-          <span>工具详情</span>
-          <button class="icon-button detail-close" id="detail-close" type="button" aria-label="关闭工具详情">
+          <span>网站详情</span>
+          <button class="icon-button detail-close" id="detail-close" type="button" aria-label="关闭网站详情">
             <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18" /></svg>
           </button>
         </div>
@@ -297,6 +303,7 @@
     <script src="vendor/ScrollTrigger.min.js" defer></script>
     <script src="site-config.js" defer></script>
     <script src="sites-data.js" defer></script>
+    <script src="discovery.js" defer></script>
     <script src="script.js" defer></script>
     <script src="animations.js" defer></script>
   </body>

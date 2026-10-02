@@ -2,7 +2,7 @@
   "name": "rosetools",
   "version": "3.0.0",
   "private": true,
-  "description": "为设计师与开发者精选的静态资源导航站",
+  "description": "收藏值得再次打开的网站：个人互联网收藏与发现站",
   "scripts": {
     "build": "node scripts/build.js",
     "dev": "npm run build && node scripts/dev-server.js",

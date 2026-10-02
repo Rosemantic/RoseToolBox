@@ -31,3 +31,16 @@ test("每个分类都有 ItemList 静态落地页", () => {
     assert.match(page, /class="site-grid category-page-grid"/);
   }
 });
+
+test("静态详情标签是筛选链接，推荐排序与浏览器共享规则一致", () => {
+  const { relatedSites } = require("../src/discovery.js");
+  for (const site of data.sites) {
+    const page = fs.readFileSync(path.join(distRoot, "tools", site.slug, "index.html"), "utf8");
+    for (const tag of site.tags) assert.ok(page.includes(`href="../../?tag=${encodeURIComponent(tag)}"`));
+    const expected = relatedSites(site, data.sites).map((item) => item.slug);
+    const actual = [...page.matchAll(/<a href="\.\.\/([^/]+)\/"><strong>/g)].map((match) => decodeURIComponent(match[1]));
+    assert.deepEqual(actual, expected, `${site.name} 推荐排序不一致`);
+    assert.doesNotMatch(page, /同类工具|设计师与开发者|精选实用工具/);
+    assert.equal(page.includes('id="related-title">相关推荐'), expected.length > 0);
+  }
+});

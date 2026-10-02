@@ -205,6 +205,7 @@ select:focus-visible {
 
 .category-navigation {
   flex: 1;
+  min-height: 0;
   padding: 22px 14px;
   overflow-y: auto;
 }
@@ -533,6 +534,9 @@ html[data-motion="ready"] .hero h1 span {
 }
 
 .tag-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   padding: 5px 11px;
   cursor: pointer;
   font-size: 12px;
@@ -544,6 +548,46 @@ html[data-motion="ready"] .hero h1 span {
   background: var(--primary-soft);
   color: var(--primary-dark);
 }
+
+.tag-count {
+  color: var(--faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.all-tags {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.all-tags summary {
+  width: fit-content;
+  padding: 4px 0;
+  color: var(--primary-dark);
+  cursor: pointer;
+  font-weight: 650;
+}
+
+.all-tags p { margin: 8px 0 12px; }
+
+.all-tags-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+  max-height: 280px;
+  padding: 3px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.all-tags-list .tag-button {
+  justify-content: space-between;
+  border-radius: 8px;
+  text-align: left;
+}
+
+#results-title { scroll-margin-top: 24px; }
 
 .discovery-toolbar {
   display: flex;
@@ -599,7 +643,7 @@ html[data-motion="ready"] .hero h1 span {
 
 .collection-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
 }
 
@@ -1203,7 +1247,8 @@ body.detail-is-open {
   gap: 7px;
 }
 
-.detail-tags span {
+.detail-tags span,
+.detail-tags a {
   padding: 5px 10px;
   border: 1px solid var(--border);
   border-radius: 999px;
