@@ -5,7 +5,19 @@ const path = require("node:path");
 const { canonicalUrl, normalizeText } = require("../src/discovery.js");
 
 const DATA_FILE = path.resolve(__dirname, "..", "src", "data", "sites.json");
-const EXCLUDED_HOSTS = new Set(["codexcn.com", "plusgpt.vip", "mh.yichengwlkj.com"]);
+// P2 entries remain excluded until an explicit later decision; clean 88API/Evol are separate approvals.
+const EXCLUDED_HOSTS = new Set([
+  "codexcn.com", "plusgpt.vip", "gen.paramore.su", "mh.yichengwlkj.com",
+  "kk.yusucai.cn", "app.wckmsc.com", "xuanyu168.net", "xz.nmslb.com",
+  "sss.ulrr.cn", "sdk.buybuygpt.shop",
+]);
+const PRIVATE_PATH = /\/(?:wallet|login|activate|activation|account|result|orders?|invite)(?:\/|$)/i;
+const PRIVATE_QUERY = /^(?:inviteCode|ref|referral|orderNo|token|access_?token|api_?key|auth|authorization|password|pwd|session|sessionid|ticket)$/i;
+const URL_MIGRATIONS = [
+  { id: "site-001", from: "https://chat.openai.com/", to: "https://chatgpt.com/" },
+  { id: "site-006", from: "https://kimi.moonshot.cn/", to: "https://www.kimi.com/" },
+  { id: "site-020", from: "https://www.framer.com/motion/", to: "https://motion.dev/" },
+];
 
 const NEW_SITE_METADATA = {
   "miai.pro": {
@@ -210,6 +222,355 @@ const NEW_SITE_METADATA = {
   },
 };
 
+// P2.1 approved identities: exact public paths only; old folder names are weak context.
+Object.assign(NEW_SITE_METADATA, {
+  "100font.com": {
+    "name": "100font",
+    "url": "https://www.100font.com/",
+    "category": "素材资源",
+    "subcategory": "字体",
+    "description": "整理免费商用字体，并提供字体样式筛选、授权类型和使用说明。",
+    "tags": [
+      "免费商用",
+      "中文字体",
+      "字体授权"
+    ],
+    "aliases": [
+      "100font.com"
+    ],
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "slug": "100font",
+    "paths": [
+      "/"
+    ]
+  },
+  "wallhaven.cc": {
+    "name": "Wallhaven",
+    "url": "https://wallhaven.cc/",
+    "category": "素材资源",
+    "subcategory": "壁纸",
+    "description": "由社区提交和整理高清桌面壁纸，支持搜索、分类及热门浏览。",
+    "tags": [
+      "桌面壁纸",
+      "高清图片",
+      "摄影"
+    ],
+    "aliases": [
+      "Wallhaven.cc"
+    ],
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "slug": "wallhaven",
+    "paths": [
+      "/",
+      "/hot"
+    ],
+    "queryParams": [
+      "page"
+    ]
+  },
+  "toolwa.com": {
+    "name": "工具哇",
+    "url": "https://toolwa.com/",
+    "category": "效率工具",
+    "subcategory": "在线工具",
+    "description": "提供文字、图像、音频、开发辅助及趣味功能的浏览器工具集合。",
+    "tags": [
+      "文字处理",
+      "图片处理",
+      "音频编辑",
+      "开发"
+    ],
+    "aliases": [
+      "ToolWa",
+      "工具蛙"
+    ],
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "slug": "toolwa",
+    "paths": [
+      "/"
+    ]
+  },
+  "xiaoyi.vc": {
+    "name": "小羿",
+    "url": "https://xiaoyi.vc/",
+    "category": "软件资源",
+    "subcategory": "软件发现",
+    "description": "介绍 Windows、macOS、浏览器扩展及其他应用，并整理软件使用技巧。",
+    "tags": [
+      "应用推荐",
+      "Windows",
+      "macOS",
+      "使用技巧"
+    ],
+    "aliases": [],
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "slug": "xiaoyi",
+    "paths": [
+      "/"
+    ]
+  },
+  "landing.love": {
+    "name": "Landing Love",
+    "url": "https://www.landing.love/",
+    "category": "灵感参考",
+    "subcategory": "网页灵感",
+    "description": "收录网站设计案例及完整页面视频，提供风格与行业分类参考。",
+    "tags": [
+      "网页设计",
+      "动效",
+      "案例"
+    ],
+    "aliases": [
+      "landing.love"
+    ],
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "slug": "landing-love",
+    "paths": [
+      "/"
+    ]
+  },
+  "lapa.ninja": {
+    "name": "Lapa Ninja",
+    "url": "https://www.lapa.ninja/",
+    "category": "灵感参考",
+    "subcategory": "网页灵感",
+    "description": "整理落地页设计案例、页面截图、视频及相关设计学习资源。",
+    "tags": [
+      "落地页",
+      "网页设计",
+      "案例",
+      "学习"
+    ],
+    "aliases": [],
+    "pricing": "freemium",
+    "platforms": [
+      "web"
+    ],
+    "slug": "lapa-ninja",
+    "paths": [
+      "/"
+    ]
+  },
+  "edclub.com": {
+    "name": "edclub",
+    "url": "https://www.edclub.com/",
+    "category": "学习与知识",
+    "subcategory": "学习平台",
+    "description": "提供打字、词汇拼写、数字素养等互动课程，并支持个人学习和课堂教学。",
+    "tags": [
+      "打字练习",
+      "语言学习",
+      "数字素养",
+      "教育"
+    ],
+    "aliases": [],
+    "pricing": "freemium",
+    "platforms": [
+      "web"
+    ],
+    "slug": "edclub",
+    "paths": [
+      "/"
+    ]
+  },
+  "zhijianshang.com": {
+    "name": "指尖上",
+    "url": "https://www.zhijianshang.com/",
+    "category": "灵感参考",
+    "subcategory": "视觉灵感",
+    "description": "以 360 度全景和目的地列表展示城市、景点、建筑与博物馆。",
+    "tags": [
+      "360全景",
+      "VR",
+      "旅行",
+      "建筑"
+    ],
+    "aliases": [],
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "slug": "zhijianshang",
+    "paths": [
+      "/",
+      "/colosseum"
+    ]
+  },
+  "gpt-image2.canghe.ai": {
+    "name": "GPT-Image2 Prompt Gallery",
+    "url": "https://gpt-image2.canghe.ai/",
+    "category": "AI 工具",
+    "subcategory": "Prompt 与 AI 资源",
+    "description": "提供图像创作提示词案例、可复制模板及在线生图测试入口。",
+    "tags": [
+      "Prompt",
+      "图像生成",
+      "视觉创作",
+      "模板"
+    ],
+    "aliases": [],
+    "pricing": "freemium",
+    "platforms": [
+      "web"
+    ],
+    "slug": "gpt-image2-prompt-gallery",
+    "paths": [
+      "/"
+    ]
+  },
+  "hvoyai.com": {
+    "name": "禾维 AI",
+    "url": "https://www.hvoyai.com/",
+    "category": "网络与服务",
+    "subcategory": "网络工具",
+    "description": "整理 AI API 中转站目录、接口检测说明和服务对比数据。",
+    "tags": [
+      "API检测",
+      "服务评测",
+      "延迟监测"
+    ],
+    "aliases": [
+      "Hvoy AI"
+    ],
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "slug": "hvoy-ai",
+    "paths": [
+      "/"
+    ]
+  },
+  "bootstrapmb.com": {
+    "name": "Bootstrap模板库",
+    "url": "https://www.bootstrapmb.com/",
+    "category": "素材资源",
+    "subcategory": "模板素材",
+    "description": "整理响应式网站模板、后台界面及前端交互插件，提供预览和下载入口。",
+    "tags": [
+      "HTML模板",
+      "Bootstrap",
+      "前端组件"
+    ],
+    "aliases": [
+      "BootstrapMB"
+    ],
+    "pricing": "freemium",
+    "platforms": [
+      "web"
+    ],
+    "slug": "bootstrapmb",
+    "paths": [
+      "/"
+    ]
+  },
+  "mars-coder.cn": {
+    "name": "火星编程导航",
+    "url": "https://mars-coder.cn/",
+    "category": "学习与知识",
+    "subcategory": "学习平台",
+    "description": "整理编程教程、学习路线、项目课程及开发者接单相关经验。",
+    "tags": [
+      "编程学习",
+      "项目实战",
+      "学习路线"
+    ],
+    "aliases": [
+      "Mars Coder"
+    ],
+    "pricing": "freemium",
+    "platforms": [
+      "web"
+    ],
+    "slug": "mars-coder",
+    "paths": [
+      "/"
+    ]
+  },
+  "jiejoe.com": {
+    "name": "JIEJOE",
+    "url": "https://www.jiejoe.com/",
+    "category": "灵感参考",
+    "subcategory": "视觉灵感",
+    "description": "展示视觉设计者的平面、交互、摄影和剪辑作品的个人作品集。",
+    "tags": [
+      "作品集",
+      "动效",
+      "视频剪辑",
+      "摄影"
+    ],
+    "aliases": [],
+    "pricing": "free",
+    "platforms": [
+      "web"
+    ],
+    "slug": "jiejoe",
+    "paths": [
+      "/",
+      "/home"
+    ]
+  },
+  "88api.ai": {
+    "name": "88API",
+    "url": "https://88api.ai/",
+    "category": "网络与服务",
+    "subcategory": "API 服务",
+    "description": "提供 AI 模型 API 接入与 Token 聚合，按模型输入、输出或调用量计费。",
+    "tags": [
+      "API",
+      "模型接口",
+      "Token",
+      "AI服务"
+    ],
+    "aliases": [],
+    "pricing": "paid",
+    "platforms": [
+      "web"
+    ],
+    "slug": "88api",
+    "paths": [
+      "/"
+    ]
+  },
+  "evolai.cn": {
+    "name": "Evol",
+    "url": "https://www.evolai.cn/",
+    "category": "AI 工具",
+    "subcategory": "AI 编程",
+    "description": "通过通信工作空间连接和控制远端 Claude Code、Codex 等 Agent，支持对话、任务与文件协作。",
+    "tags": [
+      "Agent",
+      "远程开发",
+      "Claude Code",
+      "Codex"
+    ],
+    "aliases": [],
+    "pricing": "freemium",
+    "platforms": [
+      "web"
+    ],
+    "slug": "evol",
+    "paths": [
+      "/"
+    ]
+  }
+});
+
 function decodeHtml(value) {
   return value.replace(/&amp;/g, "&").replace(/&quot;/g, '"')
     .replace(/&#39;/g, "'").replace(/&lt;/g, "<").replace(/&gt;/g, ">");
@@ -285,42 +646,73 @@ function importBookmarks(data, bookmarks, { importDate = new Date().toISOString(
   const updated = new Set();
   const skipped = [];
   for (const bookmark of bookmarks) {
+    let host, rawCanonical, url;
+    try { url = new URL(bookmark.url); host = hostOf(bookmark.url); rawCanonical = canonicalUrl(bookmark.url); }
+    catch (_) { skipped.push({ ...bookmark, reason: "无效 URL" }); continue; }
+    if (EXCLUDED_HOSTS.has(host)) { skipped.push({ ...bookmark, reason: "尚未批准导入或已排除的资源" }); continue; }
+    if (url.username || url.password || PRIVATE_PATH.test(url.pathname) || PRIVATE_PATH.test(url.hash)
+      || [...url.searchParams.keys()].some((key) => PRIVATE_QUERY.test(key))
+      || /(?:^#|[?&])(?:access_?token|session|inviteCode)=/i.test(url.hash)) {
+      skipped.push({ ...bookmark, reason: "账户、交易或邀请入口" }); continue;
+    }
+    const info = metadata[host];
+    const bookmarkPath = url.pathname.replace(/\/+$/, "") || "/";
+    const approved = Boolean(info?.url && info.category && info.subcategory);
+    if (approved && (!info.paths?.includes(bookmarkPath)
+      || [...url.searchParams.keys()].some((key) => !/^utm_/i.test(key)
+        && !/^(?:fbclid|gclid|noRedirect)$/i.test(key) && !(info.queryParams || []).includes(key)))) {
+      skipped.push({ ...bookmark, reason: "未经审核的同域路径或参数" }); continue;
+    }
     const folders = bookmark.folders.map(stripCategoryEmoji);
-    if (folders.includes("临时网页")) { skipped.push({ ...bookmark, reason: "临时网页" }); continue; }
+    if (!approved && folders.includes("临时网页")) { skipped.push({ ...bookmark, reason: "临时网页" }); continue; }
     const categoryIndex = folders.findIndex((folder) => categoryMap.has(folder));
-    const category = folders[categoryIndex];
-    const subcategory = folders[categoryIndex + 1];
-    if (categoryIndex < 0 || !categoryMap.get(category).has(subcategory)) {
+    let category = approved ? info.category : folders[categoryIndex];
+    let subcategory = approved ? info.subcategory : folders[categoryIndex + 1];
+    if (!categoryMap.get(category)?.has(subcategory)) {
       skipped.push({ ...bookmark, reason: "未知分类或子分类" }); continue;
     }
-    let host;
-    let canonical;
-    try { host = hostOf(bookmark.url); canonical = canonicalUrl(bookmark.url); }
-    catch (_) { skipped.push({ ...bookmark, reason: "无效 URL" }); continue; }
-    if (EXCLUDED_HOSTS.has(host)) { skipped.push({ ...bookmark, reason: "不适合作为公开导航资源" }); continue; }
-    let site = byCanonical.get(canonical);
+    const migration = URL_MIGRATIONS.find((entry) => [entry.from, entry.to].some((value) => canonicalUrl(value) === rawCanonical));
+    const targetUrl = migration?.to || (approved ? info.url : bookmark.url);
+    const canonical = canonicalUrl(targetUrl);
+    let site = byCanonical.get(canonical) || byCanonical.get(rawCanonical);
+    if (migration) {
+      site ||= byCanonical.get(canonicalUrl(migration.from));
+      if (!site || site.id !== migration.id) {
+        skipped.push({ ...bookmark, reason: "迁移缺少可保留的原站点身份" }); continue;
+      }
+      // Migrations change the canonical link, never the established identity or taxonomy.
+      category = site.category;
+      subcategory = site.subcategory;
+    }
     const sameHost = byHost.get(host) || [];
-    if (!site && sameHost.length === 1 && isHomeUrl(bookmark.url) && isHomeUrl(sameHost[0].url)) site = sameHost[0];
+    if (!site && sameHost.length === 1 && isHomeUrl(targetUrl) && isHomeUrl(sameHost[0].url)) site = sameHost[0];
     if (site) {
       const tags = cleanTags(site.tags || [], categoryMap.keys(), subcategory);
-      if (site.category !== category || site.subcategory !== subcategory || JSON.stringify(site.tags) !== JSON.stringify(tags)) {
+      const changeUrl = Boolean((migration || approved) && site.url !== targetUrl);
+      if (site.category !== category || site.subcategory !== subcategory || JSON.stringify(site.tags) !== JSON.stringify(tags) || changeUrl) {
+        if (changeUrl) {
+          const oldHost = hostOf(site.url);
+          byCanonical.delete(canonicalUrl(site.url));
+          byHost.set(oldHost, (byHost.get(oldHost) || []).filter((entry) => entry.id !== site.id));
+          site.url = targetUrl;
+          byCanonical.set(canonical, site);
+          indexHost(site);
+        }
         Object.assign(site, { category, subcategory, tags, updatedAt: importDate });
         updated.add(site.id);
       }
       continue;
     }
-    const info = metadata[host];
-    const bookmarkPath = new URL(bookmark.url).pathname.replace(/\/+$/, "") || "/";
     if (!info || (info.paths && !info.paths.includes(bookmarkPath))) {
       skipped.push({ ...bookmark, reason: "缺少公开展示元数据" }); continue;
     }
     site = {
-      name: info.name, url: bookmark.url, category, subcategory, description: info.description,
+      name: info.name, url: targetUrl, category, subcategory, description: info.description,
       id: `site-${String(nextId++).padStart(3, "0")}`,
-      slug: nextUniqueSlug(info.name || host, usedSlugs),
+      slug: nextUniqueSlug(info.slug || info.name || host, usedSlugs),
       tags: cleanTags(info.tags, categoryMap.keys(), subcategory),
       aliases: [...new Map((info.aliases || []).map((alias) => [normalizeText(alias), alias.trim()])).values()],
-      pricing: info.pricing, platforms: ["web"], featured: false, updatedAt: importDate,
+      pricing: info.pricing, platforms: info.platforms || ["web"], featured: false, updatedAt: importDate,
     };
     data.sites.push(site);
     byCanonical.set(canonical, site);
@@ -350,4 +742,4 @@ function main() {
 }
 
 if (require.main === module) main();
-module.exports = { parseBookmarks, importBookmarks, NEW_SITE_METADATA };
+module.exports = { parseBookmarks, importBookmarks, NEW_SITE_METADATA, URL_MIGRATIONS };

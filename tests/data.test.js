@@ -6,8 +6,8 @@ const path = require("node:path");
 const root = path.resolve(__dirname, "..");
 const data = JSON.parse(fs.readFileSync(path.join(root, "src", "data", "sites.json"), "utf8"));
 
-test("P1 保留现有站点并采用新分类", () => {
-  assert.equal(data.sites.length, 121);
+test("P2.1 保留基线并导入 15 个批准资源", () => {
+  assert.equal(data.sites.length, 136);
   assert.equal(data.categories.length, 11);
   for (const name of ["Gamma", "Lovart", "Meshy", "Stitch", "Godly"]) {
     assert.ok(data.sites.some((site) => site.name === name), `缺少新版资源 ${name}`);
@@ -41,9 +41,33 @@ test("首页包含精选与不同价格类型", () => {
   assert.deepEqual(new Set(data.sites.map((site) => site.pricing)), new Set(["free", "freemium", "paid"]));
 });
 
-test("P1 完整保留基线 121 个 ID、slug 和 URL", () => {
+test("保留基线 121 个 ID、slug、顺序，仅允许 3 个批准 URL 迁移", () => {
   const baseline = require("./fixtures/p1-baseline-sites.json");
-  assert.deepEqual(data.sites.map(({ id, slug, url }) => ({ id, slug, url })), baseline);
+  const migrations = { "site-001": "https://chatgpt.com/", "site-006": "https://www.kimi.com/", "site-020": "https://motion.dev/" };
+  assert.deepEqual(data.sites.slice(0, baseline.length).map(({ id, slug, url }) => ({ id, slug, url })),
+    baseline.map((site) => ({ ...site, url: migrations[site.id] || site.url })));
+});
+
+test("P2.1 新资源具有连续稳定身份、干净主页与诚实核验日期", () => {
+  const expected = ["100font", "Wallhaven", "工具哇", "小羿", "Landing Love", "Lapa Ninja", "edclub", "指尖上", "GPT-Image2 Prompt Gallery", "禾维 AI", "Bootstrap模板库", "火星编程导航", "JIEJOE", "88API", "Evol"];
+  const added = data.sites.slice(121);
+  assert.deepEqual(added.map((site) => site.name), expected);
+  assert.deepEqual(added.map((site) => site.id), expected.map((_, index) => "site-" + (122 + index)));
+  for (const site of added) {
+    assert.equal(site.featured, false);
+    assert.equal(site.updatedAt, "2026-10-02");
+    assert.equal(new URL(site.url).pathname, "/");
+    assert.equal(new URL(site.url).search, "");
+    assert.equal(new URL(site.url).hash, "");
+    assert.equal(site.verifiedAt, ["88API", "Evol"].includes(site.name) ? "2026-10-02" : undefined);
+  }
+  assert.equal(added.find((site) => site.name === "88API").pricing, "paid");
+  assert.equal(added.find((site) => site.name === "Evol").pricing, "freemium");
+  const excluded = ["variant.com", "codexcn.com", "gen.paramore.su", "plusgpt.vip", "mh.yichengwlkj.com", "kk.yusucai.cn", "app.wckmsc.com", "xuanyu168.net", "xz.nmslb.com", "sss.ulrr.cn", "sdk.buybuygpt.shop"];
+  for (const site of data.sites) {
+    assert.ok(!excluded.includes(new URL(site.url).hostname.replace(/^www\./, "")));
+    assert.doesNotMatch(site.url, /inviteCode|orderNo|\/(wallet|login|activate|activation|result)(?:[/?#]|$)/i);
+  }
 });
 
 test("分类精确采用 P1 的 11 类 48 子分类，图标是有效数据字段", () => {

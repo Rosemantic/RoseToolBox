@@ -11,7 +11,7 @@ test("查询保留中文，处理全角、大小写、重复空白与空输入",
   assert.ok(D.matchesQuery(data.sites.find((site) => site.name === "ChatGPT"), "CHATGPT"));
   assert.ok(D.matchesQuery(data.sites.find((site) => site.name === "ChatGPT"), "聊天机器人 大模型"));
   assert.ok(D.matchesQuery(data.sites.find((site) => site.name === "GitHub"), "开源社区"));
-  assert.equal(D.filterSites(data.sites, { ...all, q: "  " }).length, 121);
+  assert.equal(D.filterSites(data.sites, { ...all, q: "  " }).length, data.sites.length);
 });
 
 test("多关键词 AND 可以跨字段匹配，不能只匹配其中一词", () => {

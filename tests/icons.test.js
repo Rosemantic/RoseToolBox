@@ -26,10 +26,18 @@ test("图标同步帮助命令无需网络即可运行", () => {
   assert.match(result.stdout, /--refresh/);
 });
 
-test("所有站点都配置了存在于项目内的图标文件", () => {
+test("基线图标保持本地有效，新增资源可使用既有首字回退图标", () => {
   const data = JSON.parse(fs.readFileSync(path.join(root, "src", "data", "sites.json"), "utf8"));
+  const baselineIds = new Set(require("./fixtures/p1-baseline-sites.json").map((site) => site.id));
   for (const site of data.sites) {
-    assert.match(site.icon || "", /^icons\/[a-z0-9-]+\.(?:gif|ico|jpg|png|svg|webp)$/);
+    if (!site.icon) {
+      assert.ok(!baselineIds.has(site.id), `基线图标缺失：${site.name}`);
+      const detail = fs.readFileSync(path.join(root, "dist", "tools", site.slug, "index.html"), "utf8");
+      assert.ok(detail.includes('class="site-icon is-fallback"'));
+      assert.ok(detail.includes('<span class="site-icon-fallback">' + [...site.name][0].toUpperCase() + '</span>'));
+      continue;
+    }
+    assert.match(site.icon, /^icons\/[a-z0-9-]+\.(?:gif|ico|jpg|png|svg|webp)$/);
     assert.ok(
       fs.existsSync(path.join(root, "src", "assets", site.icon)),
       `${site.name} 的图标文件不存在：${site.icon}`,
